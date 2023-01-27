@@ -1,0 +1,69 @@
+/* faq */
+
+.dropdownIcon {
+  transition: color 0.25ms ease-in-out;
+}
+
+.faqItem:hover .dropdownIcon {
+  cursor: pointer;
+  color: var(--pri-clr-op75);
+}
+
+.faqTitle {
+  border-top: 1px solid var(--grey-clr);
+  padding: 1.25rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  transition: color 0.25ms ease-in-out;
+}
+
+.faqTitleLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faqTitleLeft img {
+  width: 25px;
+}
+
+.faqTitle:hover {
+  cursor: pointer;
+}
+
+.faqTitleText {
+  font-size: 1rem;
+  flex: 1;
+  line-height: 1.6;
+  position: relative;
+}
+
+.faqItem:hover .faqTitleLeft {
+  color: var(--pri-clr-op75);
+}
+
+.faqItem:last-child .faqDesc {
+  border-bottom: 1px solid var(--grey-clr);
+}
+
+.faqDesc {
+  height: 0px;
+  overflow: hidden;
+}
+
+/* classes for faq functionality */
+
+/* when the faqDesc has active class also change the icon class to  fa-chevron-up REACT PART*/
+
+.faqDesc.active {
+  height: auto;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 1;
+  padding: 0 2rem 1rem 2rem;
+}

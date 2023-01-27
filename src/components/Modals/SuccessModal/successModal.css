@@ -1,0 +1,43 @@
+.modal-thankyou {
+  max-width: 400px;
+
+  background: var(--linear-gradient);
+  z-index: 2000;
+  height: 70vh;
+  max-height: 500px;
+}
+
+.thankyouModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--white);
+  text-align: center;
+}
+
+.logoWhite {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.thankyouModalTitle {
+  font-size: 1.75rem;
+  max-width: 13ch;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.thankyouModalSubtitle {
+  font-size: 1.25rem;
+  max-width: 20ch;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.thankyouModalDesc {
+  font-size: 0.8rem;
+  max-width: 25ch;
+  line-height: 1.5;
+}

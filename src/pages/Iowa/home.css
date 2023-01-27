@@ -1,0 +1,724 @@
+/* header */
+header {
+  /* background: url('./assets/headerBg.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: 100% 60%;
+  position: relative;
+  margin-top: 60px;
+  transition: background-image 0.25s ease-in-out;
+}
+
+/* header text */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header-text-main {
+  margin-top: 12rem;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.header-text-iowa {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header-text.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.header-text.lastSlide {
+  transform: translateX(-50%);
+}
+.header-text.nextSlide {
+  transform: translateX(50%);
+}
+
+.header-text-title {
+  font-size: 3rem;
+  font-family: var(--yeseva);
+  margin-bottom: 0.25rem;
+  max-width: 800px;
+  margin-left: auto;
+}
+
+.header-text-subtitle {
+  font-size: 2.5rem;
+  font-family: var(--yeseva);
+}
+
+.header-text-desc {
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+  max-width: 650px;
+}
+
+.iowaBtn {
+  background: linear-gradient(#c4d585, #6cb388);
+}
+
+.arizonaBtn {
+  background: linear-gradient(#bd494f, #983149);
+}
+
+/* header slider controls */
+.header-slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-slider-control {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--grey-clr);
+
+  transition: background-color 0.25s ease-in-out;
+}
+
+.header-slider-control.active {
+  background-color: var(--sec-clr);
+}
+
+/* new arrivals section */
+
+.new-arrival-bg {
+  background: url('../../assets//new-section.png');
+  background-size: 35%;
+  background-repeat: no-repeat;
+
+  min-height: 680px;
+  background-position: 0% 20%;
+  position: relative;
+  margin: 2rem 0;
+}
+
+/* new arrival text */
+.new-arrival-text {
+  max-width: 680px;
+  margin-left: auto;
+  margin-bottom: 4rem;
+}
+
+.new-arrival-section-title {
+  font-family: var(--yeseva);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.new-arrival-desc {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/*  new arrival course cards carousel */
+.new-arrival-course-carousel {
+  position: relative;
+
+  width: 75%;
+  margin-left: auto;
+}
+
+/* course cards */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+}
+
+.course-cards {
+  gap: 1rem;
+  scroll-behavior: smooth;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.course-card {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  min-width: 280px;
+  max-width: 280px;
+  min-height: 360px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+  background-color: var(--white);
+}
+
+.course-card:hover {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-desc {
+  padding: 1rem 0.75rem 1.5rem 0.75rem;
+}
+
+.course-desc-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  max-width: 25ch;
+}
+
+.course-price {
+  font-size: 1rem;
+  color: var(--sec-clr);
+  font-weight: 700;
+}
+
+.course-card-img {
+  height: 16rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
+  position: relative;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.course-card-img.new::before {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  content: 'New';
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 500;
+  background-color: var(--star-gold-clr);
+}
+
+.course-cta {
+  display: inline-block;
+  padding: 1rem 0;
+  background-color: var(--pri-clr);
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: var(--white);
+  text-transform: capitalize;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease-in-out;
+}
+
+.course-card:hover .course-cta {
+  opacity: 1;
+}
+
+/* carousel controls */
+.carousel-control {
+  border: 1px solid var(--grey-clr-2);
+  background-color: var(--white);
+  border-radius: 50%;
+  color: var(--grey-clr-2);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+
+  z-index: 2;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-control.left-btn {
+  left: -5%;
+}
+
+.carousel-control.right-btn {
+  right: -5%;
+}
+
+/* meet pathways */
+
+/* courses grid */
+.courses-grid-section {
+  margin-bottom: 2rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  column-gap: 1rem;
+}
+
+.courses-inner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.course-card.left-col .course-card-img {
+  height: 85%;
+}
+
+.w-100 {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.course-card.left-col {
+  width: 100%;
+}
+
+.course-card-img .see-more {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  content: 'see more >';
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  font-weight: 500;
+  background-color: var(--white);
+}
+
+.course-card-img.hotdeal::after {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  content: 'hot deal';
+  text-transform: capitalize;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 500;
+  background-color: var(--sec-clr);
+}
+
+/* deals of the week */
+.sale {
+  background: url('../../assets/dealsBg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.deals {
+  margin-bottom: 4rem;
+}
+
+.sale {
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sale-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.deals-subtitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.deals-title {
+  font-family: var(--yeseva);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.colon {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.timer-el {
+  color: var(--pri-clr);
+  height: 4rem;
+  width: 4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.timer-el::before {
+  content: '';
+  position: absolute;
+  bottom: -35%;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--pri-clr);
+}
+
+.days::before {
+  content: 'days';
+}
+
+.hours::before {
+  content: 'hours';
+}
+
+.minutes::before {
+  content: 'minutes';
+}
+
+.seconds::before {
+  content: 'seconds';
+}
+
+.home-sale-right-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+
+  background-image: url('../../assets/course-img.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.home-sale-right-img::before {
+  content: url('../../assets/sale-img.png');
+  width: 3rem;
+  position: absolute;
+  left: -7%;
+}
+
+.deals-course-carousel {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* testimonials */
+.testimonial-bg {
+  background: url('../../assets/testimonials-bg.png');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.testimonial {
+  padding: 6rem 0 10rem 0;
+  position: relative;
+}
+
+.testimonial-title {
+  font-size: 2rem;
+  font-family: var(--yeseva);
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.testimonial-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.testimonial-text-desc {
+  line-height: 1.6;
+
+  position: absolute;
+  max-width: 80%;
+}
+
+.user {
+  position: absolute;
+
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+}
+
+.user-1 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+
+  left: -13%;
+  top: -20%;
+
+  background: url('../../assets/user-1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.user-2 {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+
+  left: -30%;
+  top: 25%;
+
+  background: url('../../assets/user-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.user-3 {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+
+  left: -17%;
+  top: 90%;
+
+  background: url('../../assets/user-3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.user-4 {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+
+  top: -25%;
+  right: -18%;
+
+  background: url('../../assets/user-4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.user-5 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+
+  right: -25%;
+  top: 35%;
+
+  background: url('../../assets/user-5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.user-6 {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+
+  right: -17%;
+  top: 90%;
+
+  background: url('../../assets/user-6.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* instagram */
+/* instagram */
+.instagram-section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1rem;
+  padding: 4rem 0;
+}
+
+.instagram-text {
+  grid-column: 1/3;
+}
+
+.instagram-subtitle {
+  color: var(--sec-clr);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.instagram-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--yeseva);
+}
+
+.instagram-desc {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.instagram-img {
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-bottom-bg {
+  height: 8rem;
+  width: 100%;
+
+  margin-top: -7rem;
+}
+
+.instagram-bottom-bg.bgIowa {
+  background-color: #000;
+}
+
+/* iowa */
+
+.iowa-new-arrival-bg {
+  background: url('../../assets//iowaNewArrivals.png');
+  background-size: 40%;
+  background-repeat: no-repeat;
+
+  min-height: 580px;
+  background-position: center left;
+  position: relative;
+  margin: 2rem 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.arizona-new-arrival {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bgArizona {
+  background-color: #d36154;
+}
+
+.sale.bgIowa {
+  background: url('../../assets/iowaDealsBg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.arizona-sale-right-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+
+  background-image: url('../../assets/programdevelopmemnt.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.dealsTitleIowa {
+  text-align: center;
+  color: var(--white);
+}
+
+.pri-text {
+  color: var(--pri-clr);
+  font-size: 2.25rem;
+  display: block;
+}
+
+.testimonial-bg.bgIowa {
+  background: url('../../assets/iowaTestimonialsBg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footerBottom {
+  position: relative;
+}
+
+.footer.bgIowa {
+  color: var(--white);
+}
+
+footer.bgIowa {
+  background-color: #000;
+}
+
+footer.bgIowa .footerLink {
+  color: var(--grey-clr-2);
+}
+
+.footerBottom.bgIowa::after {
+  content: url('../../assets/iowaFooterimg.png');
+  position: absolute;
+  right: -2%;
+  top: -190%;
+}
+
+.m4 {
+  margin: 8rem auto;
+}
+
+.mb2 {
+  margin-bottom: 2rem;
+}

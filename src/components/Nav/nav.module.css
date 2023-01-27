@@ -1,0 +1,155 @@
+/* nav top */
+/* nav top bar */
+.navContainer {
+  width: 95%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.navTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.navTopBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+
+  max-width: 1000px;
+}
+
+.navTopBarText {
+  flex-shrink: 1;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.leftIcon {
+  margin-left: 2rem;
+}
+
+.rightIcon {
+  margin-right: 2rem;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+
+  transform: translateY(-50%);
+}
+
+.navTop.closeNavtop {
+  height: 0px;
+}
+
+.navTop.navTop.closeNavtop .navTopBarText,
+.navTop.navTop.closeNavtop .rightIcon,
+.navTop.navTop.closeNavtop .leftIcon,
+.navTop.navTop.closeNavtop .closeIcon {
+  display: none;
+}
+
+/* navbar */
+.navMain {
+  /* border: 1px solid red; */
+  position: fixed;
+  top: 60px;
+  height: 78px;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.navFlex {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoImg {
+  max-width: 200px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.navLinksRight {
+  gap: 1rem;
+}
+
+.navLink {
+  text-transform: capitalize;
+}
+
+.cartLink {
+  position: relative;
+}
+
+.cartCount {
+  font-size: 0.75rem;
+  color: var(--white);
+  background: var(--sec-clr);
+
+  height: 1.25rem;
+  width: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: -7px;
+  right: -7px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdownBtn {
+  text-transform: capitalize;
+  line-height: 1.6;
+  padding: ;
+}
+
+.dropdownIcon {
+  font-weight: 300;
+  font-size: 0.65rem;
+}
+
+.moveUp {
+  top: 0;
+}
+
+.sticky {
+  height: 60px;
+  background: var(--white);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
