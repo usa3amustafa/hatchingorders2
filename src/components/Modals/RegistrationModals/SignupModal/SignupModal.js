@@ -46,10 +46,7 @@ const SignupModal = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post(
-        'http://184.72.182.238/user/register',
-        formData
-      );
+      const response = await axios.post('/user/register', formData);
       console.log(response.data);
       console.log(response.message);
       console.log(response.status);
@@ -89,7 +86,7 @@ const SignupModal = () => {
 
   return (
     <>
-      <h2 className="registrationModalTitle">Create account</h2>
+      <h2 className="registrationModalTitle">Create ac hree</h2>
 
       {/* form */}
       <form onSubmit={handleSubmit}>
