@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLong } from '@fortawesome/free-solid-svg-icons'
 
-import paypalIcon from '../../assets/paypal.png'
-import visaIcon from '../../assets/visa.png'
-import mastercardIcon from '../../assets/masterCard.png'
-import aExpressIcon from '../../assets/aExpress.png'
+import paypalIcon from '../../assets/paypal.webp'
+import visaIcon from '../../assets/visa.webp'
+import mastercardIcon from '../../assets/masterCard.webp'
+import aExpressIcon from '../../assets/aExpress.webp'
 
 function Footer({ className }) {
   return (
@@ -13,11 +13,19 @@ function Footer({ className }) {
         <div className='footerTop'>
           <div className='footerCol footerCol1'>
             <h2 className='footerColTitle'>Info</h2>
-            <a href='#' className='footerLink'>
+            <a
+              href='https://hatchingorders.com'
+              target='_blank'
+              className='footerLink'
+            >
               Hatching Results
             </a>
-            <a href='#' className='footerLink'>
-              San Macros
+            <a
+              href='https://hatchingorders.com/public/university-credits'
+              target='_blank'
+              className='footerLink'
+            >
+              San Marcos
             </a>
             <a href='#' className='footerLink'>
               Blog
@@ -35,9 +43,9 @@ function Footer({ className }) {
 
           <div className='footerCol footerCol2'>
             <h2 className='footerColTitle'>Customer Care</h2>
-            <a href='#' className='footerLink'>
+            {/* <a href='#' className='footerLink'>
               Refunds and Returns
-            </a>
+            </a> */}
             <a href='#' className='footerLink'>
               Contact Us
             </a>
@@ -69,16 +77,28 @@ function Footer({ className }) {
         <div className={`footerBottom ${className}`}>
           <div className='paymentOptions'>
             <div className='paymentOption'>
-              <img src={paypalIcon} className='paymentOptionImg' alt='' />
+              <img
+                src={mastercardIcon}
+                className='paymentOptionImg'
+                alt=''
+                loading='lazy'
+              />
             </div>
             <div className='paymentOption'>
-              <img src={mastercardIcon} className='paymentOptionImg' alt='' />
+              <img
+                src={visaIcon}
+                className='paymentOptionImg'
+                alt=''
+                loading='lazy'
+              />
             </div>
             <div className='paymentOption'>
-              <img src={visaIcon} className='paymentOptionImg' alt='' />
-            </div>
-            <div className='paymentOption'>
-              <img src={aExpressIcon} className='paymentOptionImg' alt='' />
+              <img
+                src={aExpressIcon}
+                className='paymentOptionImg'
+                alt=''
+                loading='lazy'
+              />
             </div>
           </div>
 

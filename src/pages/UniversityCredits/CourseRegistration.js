@@ -1,11 +1,16 @@
-import courseRegImg from '../../assets/universityCredits2.png'
+import courseRegImg from '../../assets/universityCredits2.webp'
 
 const CourseRegistration = () => {
   return (
     <section className='courseRegBg'>
       <div className='container courseReg'>
         <div className='courseRegLeft'>
-          <img src={courseRegImg} alt='' className='courseRegLeftImg' />
+          <img
+            src={courseRegImg}
+            alt=''
+            className='courseRegLeftImg'
+            loading='lazy'
+          />
 
           <a href='#' className='courseRegLeftBtn'>
             $ <span className='bold fontHeading'>399</span> only <br />

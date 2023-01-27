@@ -31,6 +31,7 @@ const OurMission = () => {
                       src={slide.img}
                       alt=''
                       className='ourMissionRightImgImg'
+                      loading='lazy'
                     />
                   </div>
                   <h2 className='ourMissionRightTitle'>{slide.title}</h2>

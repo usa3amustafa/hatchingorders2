@@ -1,10 +1,10 @@
 import Navbar from './Navbar'
 import styles from './nav.module.css'
 
-import logo from '../../assets/hatchfulLogo.png'
-import searchIcon from '../../assets/search.png'
-import cartIcon from '../../assets/cart.png'
-import userIcon from '../../assets/user.png'
+import logo from '../../assets/hatchfulLogo.webp'
+import searchIcon from '../../assets/search.webp'
+import cartIcon from '../../assets/cart.webp'
+import userIcon from '../../assets/user.webp'
 
 import CheckoutModal from '../Modals/CheckoutModal'
 import { Link } from 'react-router-dom'
@@ -48,7 +48,12 @@ const NavMain = () => {
             <div className={styles.navBar}>
               <div className={styles.logo}>
                 <Link to='/'>
-                  <img src={logo} alt='' className={styles.logoImg} />
+                  <img
+                    src={logo}
+                    alt=''
+                    className={styles.logoImg}
+                    loading='lazy'
+                  />
                 </Link>
               </div>
 
@@ -58,20 +63,15 @@ const NavMain = () => {
                 <Navbar />
 
                 <ul className={`${styles.navLinks} ${styles.navLinksRight}`}>
-                  <li>
-                    <button>
-                      <img src={searchIcon} alt='' />
-                    </button>
-                  </li>
                   <li className={styles.cartLink} onClick={openCartModal}>
                     <button>
-                      <img src={cartIcon} alt='' />
+                      <img src={cartIcon} alt='' loading='lazy' />
                     </button>
                     <p className={styles.cartCount}>{cartTotalItems}</p>
                   </li>
                   <li>
                     <button onClick={() => openRegistrationModal()}>
-                      <img src={userIcon} alt='' />
+                      <img src={userIcon} alt='' loading='lazy' />
                     </button>
                   </li>
                 </ul>

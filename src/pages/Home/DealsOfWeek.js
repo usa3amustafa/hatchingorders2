@@ -1,4 +1,5 @@
 import CoursesCarousel from '../../components/CoursesCarousel/CoursesCarousel'
+import addToCart from '../../assets/add-to-cart.webp'
 
 const DealsOfWeek = () => {
   return (
@@ -24,7 +25,7 @@ const DealsOfWeek = () => {
             </div>
 
             <a href='#' className='cta'>
-              <img src='./img/course-cards/add-to-cart.png' alt='' /> $25% Off
+              <img src={addToCart} alt='' loading='lazy' /> $25% Off
             </a>
           </div>
 

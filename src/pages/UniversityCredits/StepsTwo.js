@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import stepsTwoImgOne from '../../assets/userImg.jpg'
-import stepsTwoImgTwo from '../../assets/userImg2.jpg'
-import stepsTwoImgThree from '../../assets/userImg3.jpg'
-import stepsTwoImgFour from '../../assets/userImg4.jpg'
+import stepsTwoImgOne from '../../assets/userImg.webp'
+import stepsTwoImgTwo from '../../assets/userImg2.webp'
+import stepsTwoImgThree from '../../assets/userImg3.webp'
+import stepsTwoImgFour from '../../assets/userImg4.webp'
 
 const StepsTwo = () => {
   const [activeStep, setActiveStep] = useState(1)

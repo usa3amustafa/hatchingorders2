@@ -3,7 +3,7 @@ import NavMain from '../../components/Nav/NavMain'
 import { headerSliderData } from './homeData'
 import { useContext } from 'react'
 import AppContext from '../../context/AppContext'
-import arizonaHeaderImg1 from '../../assets/arizonaHeader1.png'
+import arizonaHeaderImg1 from '../../assets/arizonaHeader1.webp'
 
 function Header() {
   const { openNavtop } = useContext(AppContext)
@@ -23,18 +23,25 @@ function Header() {
           <div className='header-text-main'>
             <div className='header-text-arizona'>
               <h2 className='header-text-title'>
-                Are You a School Counselor in Iowa Looking to Renew Your
+                Are You a School Counselor in Arizona Looking to Renew Your
                 License?
               </h2>
 
               <p className='header-text-desc'>
-                Hatching Results courses allow Iowa School Counselors to
-                complete one Iowa License Renewal credit per course. Each course
-                is approved by the Iowa Board of Educational Examiners through
-                the Iowa State Education Association (ISEA) which is a state
-                affiliate of the National Education Association (NEA).
+                Hatching Results partners with California State University San
+                Marcos (CSUSM) to offer courses for school counselors for
+                continued education. These courses allow Arizona School
+                Counselors to complete the 6 semester (credit) hour deficiency
+                to renew their certificates in the three-year window who apply
+                for certification under options B, C, and D.
               </p>
-              <button className={`cta cta-pri arizonaBtn`}>explore more</button>
+              <a
+                href='https://www.azed.gov/'
+                target='_blank'
+                className={`cta cta-pri arizonaBtn`}
+              >
+                explore more
+              </a>
             </div>
           </div>
         </div>

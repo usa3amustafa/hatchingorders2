@@ -25,15 +25,15 @@ export const AppProvider = ({ children }) => {
 
   // courses
   const datadatadata = coursesData.find(course => {
-    return course.title === 'data, data, data'
+    return course.id === 1
   })
 
   const timeManagement = coursesData.find(course => {
-    return course.title === 'It’s All About Time (Management)'
+    return course.id === 2
   })
 
   const actionplans = coursesData.find(course => {
-    return course.title === 'Tier 1 Action Plans & Pre/Post Tests'
+    return course.id === 3
   })
 
   const postsecondaryreadiness = coursesData.find(course => {
@@ -46,6 +46,22 @@ export const AppProvider = ({ children }) => {
 
   const purposefulprograms = coursesData.find(course => {
     return course.id === 6
+  })
+
+  const internationalschoolc = coursesData.find(course => {
+    return course.id === 7
+  })
+
+  const reportingresults = coursesData.find(course => {
+    return course.id === 8
+  })
+
+  const sysofchange = coursesData.find(course => {
+    return course.id === 9
+  })
+
+  const miracleschallanges = coursesData.find(course => {
+    return course.id === 10
   })
 
   // close nav top
@@ -291,6 +307,10 @@ export const AppProvider = ({ children }) => {
         openDataVidModal,
         pathwaysModal,
         openPathwaysModal,
+        internationalschoolc,
+        reportingresults,
+        sysofchange,
+        miracleschallanges,
       }}
     >
       {children}

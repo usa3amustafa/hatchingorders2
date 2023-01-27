@@ -1,6 +1,6 @@
 import data from '../../data'
-import iowapostsecpw from '../../assets/iowapostsecpw.png'
-import iowadatapw from '../../assets/iowadatapw.png'
+import iowapostsecpw from '../../assets/iowapostsecpw.webp'
+import iowadatapw from '../../assets/iowadatapw.webp'
 
 export const homeData = data.homeData
 export const headerSliderData = data.iowaData.headerSliderData
@@ -12,7 +12,7 @@ export const meetPathwaysData = [
   },
   {
     id: 2,
-    title: 'Post Secondary Pathways',
+    title: 'Postsecondary Pathways',
     bgImg: iowapostsecpw,
   },
 ]

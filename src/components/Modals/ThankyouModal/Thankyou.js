@@ -1,4 +1,4 @@
-import logoWhite from '../../../assets/logoWhite.png'
+import logoWhite from '../../../assets/logoWhite.webp'
 import Modal from '../../shared/Modal/Modal'
 
 import './thankyou.css'
@@ -8,7 +8,7 @@ const Thankyou = () => {
     <Modal type='thankyou'>
       <div className='thankyouModal'>
         <div className='logoWhite'>
-          <img src={logoWhite} alt='' className='logoWhiteImg' />
+          <img src={logoWhite} alt='' className='logoWhiteImg' loading='lazy' />
         </div>
 
         <h2 className='thankyouModalTitle'>Thank You For Purchase</h2>

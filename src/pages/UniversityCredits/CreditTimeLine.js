@@ -1,4 +1,4 @@
-import logo from '../../assets/hatchfulLogo.png'
+import logo from '../../assets/hatchfulLogo.webp'
 
 const CreditTimeLine = () => {
   return (
@@ -16,7 +16,7 @@ const CreditTimeLine = () => {
         <div className='timelineTables'>
           <ul className='timelineTable'>
             <li className='logo timelineTableTitle'>
-              <img src={logo} alt='' />
+              <img src={logo} alt='' loading='lazy' />
             </li>
             <li className='timelineTableRow'>semester begins</li>
             <li className='timelineTableRow'>last date to register</li>

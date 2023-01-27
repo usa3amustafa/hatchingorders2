@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import slidesData from './rightcolSliderData'
-import logo from '../../../assets/hatchfulLogo.png'
+import logo from '../../../assets/hatchfulLogo.webp'
 
 const RegistrationRightCol = () => {
   const [slides, setSlides] = useState(slidesData)
@@ -28,10 +28,11 @@ const RegistrationRightCol = () => {
   return (
     <section className='registrationModalRightCol'>
       <div className='registrationRightColLogo'>
-        <img src={logo} alt='' />
+        <img src={logo} alt='' loading='lazy' />
       </div>
-      <div className='section-center'>
-        {slides.map((slide, slideIndex) => {
+
+      {/* <div className='section-center'> */}
+      {/* {slides.map((slide, slideIndex) => {
           const { id, image, title, desc } = slide
 
           let position = 'nextSlide'
@@ -47,15 +48,15 @@ const RegistrationRightCol = () => {
 
           return (
             <article className={position} key={id}>
-              <img src={image} alt='' className='person-img' />
+              <img src={image} alt='' className='person-img' loading='lazy'/>
 
               <p className='title'>{title}</p>
               <p className='desc'>{desc}</p>
             </article>
           )
-        })}
-        {/* header controls */}
-        <div className='header-slider-controls '>
+        })} */}
+      {/* header controls */}
+      {/* <div className='header-slider-controls '>
           {slidesData.map((item, i) => {
             return (
               <div
@@ -67,8 +68,8 @@ const RegistrationRightCol = () => {
               ></div>
             )
           })}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </section>
   )
 }

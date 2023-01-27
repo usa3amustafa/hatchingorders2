@@ -1,10 +1,10 @@
 /* header */
 .header-main {
-  /* background: url('./assets/headerBg.png'); */
-  background-size: 40%;
+  /* background: url('./assets/headerBg.webp'); */
+  background-size: 30%;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  background-position: 101% 0%;
+  height: 680px;
+  background-position: 100% 0%;
   position: relative;
   margin-top: 60px;
   transition: background-image 0.25s ease-in-out;
@@ -24,7 +24,7 @@
 }
 
 .header-text-main-home {
-  margin-top: 12rem;
+  margin-top: 10rem;
   width: 100%;
   height: 600px;
   position: relative;
@@ -110,7 +110,7 @@
 /* new arrivals section */
 
 .new-arrival-bg {
-  background: url('../../assets//new-section.png');
+  background: url('../../assets//new-section.webp');
   background-size: 35%;
   background-repeat: no-repeat;
 
@@ -381,7 +381,7 @@
 
 /* deals of the week */
 .sale {
-  background: url('../../assets/dealsBg.png');
+  background: url('../../assets/dealsBg.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -482,7 +482,7 @@
   height: 20rem;
   border-radius: 50%;
 
-  background-image: url('../../assets/purposfulprograms.png');
+  background-image: url('../../assets/purposfulprograms.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -491,7 +491,7 @@
 }
 
 .sale-right-img::before {
-  content: url('../../assets/sale-img.png');
+  content: url('../../assets/sale-img.webp');
   width: 3rem;
   position: absolute;
   left: -7%;
@@ -505,7 +505,7 @@
 
 /* testimonials */
 .testimonial-bg {
-  background: url('../../assets/testimonials-bg.png');
+  background: url('../../assets/testimonials-bg.webp');
 
   background-size: cover;
   background-position: center center;
@@ -556,7 +556,7 @@
   left: -13%;
   top: -20%;
 
-  background: url('../../assets/user-1.png');
+  background: url('../../assets/user-1.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -569,7 +569,7 @@
   left: -30%;
   top: 25%;
 
-  background: url('../../assets/user-2.png');
+  background: url('../../assets/user-2.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -582,7 +582,7 @@
   left: -17%;
   top: 90%;
 
-  background: url('../../assets/user-3.png');
+  background: url('../../assets/user-3.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -595,7 +595,7 @@
   top: -25%;
   right: -18%;
 
-  background: url('../../assets/user-4.png');
+  background: url('../../assets/user-4.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -608,7 +608,7 @@
   right: -25%;
   top: 35%;
 
-  background: url('../../assets/user-5.png');
+  background: url('../../assets/user-5.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -621,7 +621,7 @@
   right: -17%;
   top: 90%;
 
-  background: url('../../assets/user-6.png');
+  background: url('../../assets/user-6.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -648,6 +648,7 @@
 
 .instagram-title {
   font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
   font-family: var(--yeseva);
 }
@@ -658,6 +659,9 @@
 }
 
 .instagram-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 1rem;
 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);

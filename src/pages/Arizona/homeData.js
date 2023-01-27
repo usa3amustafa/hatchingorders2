@@ -1,7 +1,7 @@
 import data from '../../data'
-import arizonapw1 from '../../assets/arizonapw1.png'
-import arizonapw2 from '../../assets/arizonapw2.png'
-import arizonapw3 from '../../assets/arizonapw3.png'
+import arizonapw1 from '../../assets/arizonapw1.webp'
+import arizonapw2 from '../../assets/arizonapw2.webp'
+import arizonapw3 from '../../assets/arizonapw3.webp'
 export const homeData = data.homeData
 export const headerSliderData = data.arizonaData.headerSliderData
 export const meetPathwaysData = [

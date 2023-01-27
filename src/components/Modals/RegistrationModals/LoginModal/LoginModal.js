@@ -1,4 +1,4 @@
-import GoogleIcon from '../../../../assets/googleIcon.png'
+import GoogleIcon from '../../../../assets/googleIcon.webp'
 import { useState, useContext } from 'react'
 import AppContext from '../../../../context/AppContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

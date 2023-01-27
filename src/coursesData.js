@@ -1,9 +1,13 @@
-import datadatadata from './assets/datadatadata.png'
-import actionplans from './assets/actionplans.png'
-import timemanagement from './assets/timemanagement.png'
-import purposfulprograms from './assets/purposfulprograms.png'
-import postsecreadiness from './assets/postsecreadiness.png'
-import programdevelopmemnt from './assets/programdevelopmemnt.png'
+import datadatadata from './assets/datadatadata.webp'
+import actionplans from './assets/actionplans.webp'
+import timemanagement from './assets/timemanagement.webp'
+import purposfulprograms from './assets/purposfulprograms.webp'
+import postsecreadiness from './assets/postsecreadiness.webp'
+import programdevelopmemnt from './assets/programdevelopmemnt.webp'
+import intentionalschoolc from './assets/IntentionalSchoolCounseling.webp'
+import reportingresults from './assets/reportingresults.webp'
+import sysofchange from './assets/sysofchange.webp'
+import miracleschallanges from './assets/miracleschallanges.webp'
 import {
   faLaptop,
   faBook,
@@ -15,9 +19,10 @@ export const coursesData = [
   {
     id: 1,
     to: '/datadatadata',
-    title: 'data, data, data',
+    title: 'Data, Data, Data',
     bgImg: datadatadata,
     price: 300,
+    new: false,
     pathway: 'datapathway',
     courseDesc: {
       desc: [`Use of Data in School Counseling (2nd Edition)`],
@@ -90,6 +95,7 @@ export const coursesData = [
     title: 'It’s All About Time (Management)',
     to: '/timemanagement',
     price: 300,
+    new: false,
     pathway: 'datapathway',
     bgImg: timemanagement,
     courseDesc: {
@@ -177,6 +183,7 @@ Activity`,
     title: 'Tier 1 Action Plans & Pre/Post Tests',
     to: '/actionplans',
     price: 300,
+    new: false,
     bgImg: actionplans,
     pathway: 'datapathway',
     courseDesc: {
@@ -247,6 +254,7 @@ Activity`,
     to: '/postsecondaryreadiness',
     price: 300,
     pathway: 'postsecpathway',
+    new: false,
     bgImg: postsecreadiness,
     courseDesc: {
       desc: [
@@ -308,6 +316,7 @@ Activity`,
     title: 'Program Development for Middle School Postsecondary Readiness',
     to: '/programdevelopment',
     price: 300,
+    new: false,
     pathway: 'postsecpathway',
     bgImg: purposfulprograms,
     courseDesc: {
@@ -382,8 +391,290 @@ determine what additional data is needed to begin supporting your students' post
       'Implementing Purposeful Programs & Services for Middle School Postsecondary ReadinessProgram Development for Middle School Postsecondary Readiness',
     to: '/purposefulprograms',
     price: 300,
+    new: false,
     pathway: 'postsecpathway',
     bgImg: programdevelopmemnt,
+    courseDesc: {
+      desc: [
+        `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
+readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+      ],
+    },
+
+    attitudes: [
+      `Believe in the value of implementing the eight components of college and career counseling`,
+      `Believe it is important to provide clear oncoming communication to students, teachers and families to promote a college going culture`,
+      `Believe all students should have access to academic planning and support to prepare them for their postsecondary goals`,
+      `Believe in the importance of collaborating with local high schools to provide academic planning and articulation`,
+    ],
+
+    skills: [
+      `Develop and implement core components of college and career counseling within the Multi-Tiered, Multi-Domain System of Supports for middle school students postsecondary readiness.`,
+      `Evaluate current college and career program as it pertains to each component of college & career readiness`,
+      `Develop ideas and strategies to implement a college and career culture at the middle school`,
+      `Design programs and services to support
+academic success for all
+students`,
+      `Examine the role of course
+sequencing to prepare middle school students for advanced course work`,
+      `Develop college & career exploration systems of
+support for middle school
+students`,
+      `Develop a plan to provide
+financial aid information to students and their families`,
+    ],
+
+    knowledge: [
+      `Understand the Eight Components of College and Career Counseling.`,
+      `Explain the value of developing a strong college and career culture on a middle school campus`,
+      `Explain the importance of providing challenging academic curriculum to prepare middle school students for college and career readiness`,
+      `Differentiate between values, skills, and interests for career exploration`,
+      `Distinguish between different types of financial aid`,
+    ],
+
+    faqItems: [
+      {
+        id: 1,
+        icon: faLaptop,
+        title: 'Instructor Methods and Course Design',
+        desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
+      },
+      {
+        id: 2,
+        icon: faBook,
+        title: 'Best-Selling ebook Included',
+        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
+      },
+
+      {
+        id: 4,
+        icon: faBuilding,
+        title: 'Self-Paced Course',
+        desc: `Challenge yourself to become an expert in creating comprehensive school counseling programs. Learn how to utilize data to design, implement and evaluate your school counseling program to ensure that all students are supported in the academic, social/emotional, college and career readiness domains.`,
+        note: `Note: You'll Earn a Certificate of Completion from Hatching Results`,
+      },
+    ],
+  },
+
+  {
+    id: 7,
+    title: 'Intentional School Counseling & Tier 2 Interventions',
+    to: '/internationalschoolcounseling',
+    price: 300,
+    pathway: 'postsecpathway',
+    bgImg: intentionalschoolc,
+    new: true,
+    courseDesc: {
+      desc: [
+        `This course concentrates on portions from chapters 2, 5, 6, & 7 from The Use of Data in School Counseling 2e: Hatching Results (and So Much More) for Students, Programs and the Profession. School Counselors and other professionals will be guided through the text with on-demand videos from Julie Hartline, one of the co-authors of the book, as well as hands-on experiences, practical resources, and recommendations they can use to support the work of a professional school counselor.`,
+        `Counselors who complete this course will understand the rationale for delivering interventions for those students who need “more” and will learn how to identify these students using data. Additionally, they will learn how to select evidence-based interventions, match interventions to student needs, develop Tier 2 action plans, and assess the effectiveness of the intervention.`,
+      ],
+    },
+
+    attitudes: [
+      `Believe that intentional Tier 2 school counseling activities are data-driven`,
+      `Believe surveying at-promise students will provide for better-targeted interventions`,
+      `Believe in the importance of using referral forms`,
+      `Believe the fishnet approach will help students receive more appropriate interventions`,
+      `Believe in the value of having a menu of services`,
+    ],
+
+    knowledge: [
+      `Explain the Multi-Tiered, Multi-Domain System of Supports.`,
+      `Understand the difference between Tiers 2 & 3`,
+      `Define intentional school counseling`,
+      `Define when and how to use the fishnet approach`,
+      `Identify which group curriculum is evidence based.`,
+      `Explain the guidelines for using intentional school counseling action plans`,
+    ],
+
+    skills: [
+      `Create surveys to determine root causes for at-promise students`,
+      `Create school counselor referral forms`,
+      `Determine Tier 2 data elements`,
+      `Determine an appropriate Tier 2 intervention to address a student need`,
+      `Create a pre-/posttest assessing students’ attitudes, knowledge, and skills`,
+      `Create an intentional school counseling action plan`,
+      `Create a menu of services`,
+    ],
+
+    faqItems: [
+      {
+        id: 1,
+        icon: faLaptop,
+        title: 'Instructor Methods and Course Design',
+        desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
+      },
+      {
+        id: 2,
+        icon: faBook,
+        title: 'Best-Selling ebook Included',
+        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
+      },
+      {
+        id: 3,
+        icon: faBookReader,
+        title: 'Suggested Readings',
+        desc: `American School Counselor Association. (2022). The ASCA national model: A framework for school counseling programs (4th ed.). Alexandria, VA. Author.`,
+      },
+      {
+        id: 4,
+        icon: faBuilding,
+        title: 'Self-Paced Course',
+        desc: `Challenge yourself to become an expert in creating comprehensive school counseling programs. Learn how to utilize data to design, implement and evaluate your school counseling program to ensure that all students are supported in the academic, social/emotional, college and career readiness domains.`,
+        note: `Note: You'll Earn a Certificate of Completion from Hatching Results`,
+      },
+    ],
+  },
+
+  {
+    id: 8,
+    title: 'Reporting Results & the Flashlight Approach',
+    to: '/comingsoon',
+    price: 'Coming Soon',
+    pathway: 'postsecpathway',
+    bgImg: reportingresults,
+    new: false,
+    courseDesc: {
+      desc: [
+        `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
+readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+      ],
+    },
+
+    attitudes: [
+      `Believe in the value of implementing the eight components of college and career counseling`,
+      `Believe it is important to provide clear oncoming communication to students, teachers and families to promote a college going culture`,
+      `Believe all students should have access to academic planning and support to prepare them for their postsecondary goals`,
+      `Believe in the importance of collaborating with local high schools to provide academic planning and articulation`,
+    ],
+
+    skills: [
+      `Develop and implement core components of college and career counseling within the Multi-Tiered, Multi-Domain System of Supports for middle school students postsecondary readiness.`,
+      `Evaluate current college and career program as it pertains to each component of college & career readiness`,
+      `Develop ideas and strategies to implement a college and career culture at the middle school`,
+      `Design programs and services to support
+academic success for all
+students`,
+      `Examine the role of course
+sequencing to prepare middle school students for advanced course work`,
+      `Develop college & career exploration systems of
+support for middle school
+students`,
+      `Develop a plan to provide
+financial aid information to students and their families`,
+    ],
+
+    knowledge: [
+      `Understand the Eight Components of College and Career Counseling.`,
+      `Explain the value of developing a strong college and career culture on a middle school campus`,
+      `Explain the importance of providing challenging academic curriculum to prepare middle school students for college and career readiness`,
+      `Differentiate between values, skills, and interests for career exploration`,
+      `Distinguish between different types of financial aid`,
+    ],
+
+    faqItems: [
+      {
+        id: 1,
+        icon: faLaptop,
+        title: 'Instructor Methods and Course Design',
+        desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
+      },
+      {
+        id: 2,
+        icon: faBook,
+        title: 'Best-Selling ebook Included',
+        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
+      },
+
+      {
+        id: 4,
+        icon: faBuilding,
+        title: 'Self-Paced Course',
+        desc: `Challenge yourself to become an expert in creating comprehensive school counseling programs. Learn how to utilize data to design, implement and evaluate your school counseling program to ensure that all students are supported in the academic, social/emotional, college and career readiness domains.`,
+        note: `Note: You'll Earn a Certificate of Completion from Hatching Results`,
+      },
+    ],
+  },
+
+  {
+    id: 9,
+    title: 'Intentional School Counseling for Systems of Change',
+    to: '/comingsoon',
+    price: 'Coming Soon',
+    pathway: 'postsecpathway',
+    bgImg: sysofchange,
+    new: false,
+    courseDesc: {
+      desc: [
+        `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
+readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+      ],
+    },
+
+    attitudes: [
+      `Believe in the value of implementing the eight components of college and career counseling`,
+      `Believe it is important to provide clear oncoming communication to students, teachers and families to promote a college going culture`,
+      `Believe all students should have access to academic planning and support to prepare them for their postsecondary goals`,
+      `Believe in the importance of collaborating with local high schools to provide academic planning and articulation`,
+    ],
+
+    skills: [
+      `Develop and implement core components of college and career counseling within the Multi-Tiered, Multi-Domain System of Supports for middle school students postsecondary readiness.`,
+      `Evaluate current college and career program as it pertains to each component of college & career readiness`,
+      `Develop ideas and strategies to implement a college and career culture at the middle school`,
+      `Design programs and services to support
+academic success for all
+students`,
+      `Examine the role of course
+sequencing to prepare middle school students for advanced course work`,
+      `Develop college & career exploration systems of
+support for middle school
+students`,
+      `Develop a plan to provide
+financial aid information to students and their families`,
+    ],
+
+    knowledge: [
+      `Understand the Eight Components of College and Career Counseling.`,
+      `Explain the value of developing a strong college and career culture on a middle school campus`,
+      `Explain the importance of providing challenging academic curriculum to prepare middle school students for college and career readiness`,
+      `Differentiate between values, skills, and interests for career exploration`,
+      `Distinguish between different types of financial aid`,
+    ],
+
+    faqItems: [
+      {
+        id: 1,
+        icon: faLaptop,
+        title: 'Instructor Methods and Course Design',
+        desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
+      },
+      {
+        id: 2,
+        icon: faBook,
+        title: 'Best-Selling ebook Included',
+        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
+      },
+
+      {
+        id: 4,
+        icon: faBuilding,
+        title: 'Self-Paced Course',
+        desc: `Challenge yourself to become an expert in creating comprehensive school counseling programs. Learn how to utilize data to design, implement and evaluate your school counseling program to ensure that all students are supported in the academic, social/emotional, college and career readiness domains.`,
+        note: `Note: You'll Earn a Certificate of Completion from Hatching Results`,
+      },
+    ],
+  },
+
+  {
+    id: 10,
+    title: 'Miracles and Challenges in the School Counseling Profession',
+    to: '/comingsoon',
+    price: 'Coming Soon',
+    pathway: 'postsecpathway',
+    new: false,
+    bgImg: miracleschallanges,
     courseDesc: {
       desc: [
         `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career

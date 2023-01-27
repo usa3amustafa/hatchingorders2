@@ -12,13 +12,19 @@ const MeetPathways = () => {
     datadatadata,
     timeManagement,
     actionplans,
+    internationalschoolc,
     postsecondaryreadiness,
     programdevelopment,
     purposefulprograms,
     openPathwaysModal,
   } = useContext(AppContext)
 
-  const datapathway = [datadatadata, actionplans, timeManagement]
+  const datapathway = [
+    datadatadata,
+    actionplans,
+    timeManagement,
+    internationalschoolc,
+  ]
 
   const postsecpathway = [
     postsecondaryreadiness,
@@ -57,7 +63,11 @@ const MeetPathways = () => {
 
       {pathwaysModal && (
         <Modal type='pathways'>
-          <div className='modal-pathways-cards'>
+          <div
+            className={`modal-pathways-cards ${
+              currArr.length > 3 && 'scroll-y'
+            }`}
+          >
             {currArr.map(item => {
               return (
                 <CourseCard id={item.id} courseData={item} isGridItem={false} />

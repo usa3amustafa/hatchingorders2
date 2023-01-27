@@ -1,45 +1,45 @@
 // header slides images
-import headerBg1 from './assets/headerImg.png'
-import headerBg2 from './assets/iowaHeaderImg.png'
-import headerBg3 from './assets/arizonaHeaderImg.png'
+import headerBg1 from './assets/headerImg.webp'
+import headerBg2 from './assets/iowaHeaderImg.webp'
+import headerBg3 from './assets/arizonaHeaderImg.webp'
 
 // arizonaHeaderImgs
-import arizonaHeaderImg1 from './assets/arizonaHeader1.png'
-import iowaHeaderImg1 from './assets/iowaHeader1.png'
+import arizonaHeaderImg1 from './assets/arizonaHeader1.webp'
+import iowaHeaderImg1 from './assets/iowaHeader1.webp'
 
 // course card img
-import courseCardImg from './assets/course-img.jpg'
+import courseCardImg from './assets/course-img.webp'
 
 // meetpathways cards bg
-import meetPathwaysCardImg from './assets/pathways.jpg'
+import meetPathwaysCardImg from './assets/pathways.webp'
 
 // section header bg
-import sectionHeaderBg from './assets/sectionHeaderBg.png'
+import sectionHeaderBg from './assets/sectionHeaderBg.webp'
 
 // about slides images
-import aboutSlideOneImg from './assets/ourMission.png'
+import aboutSlideOneImg from './assets/ourMission.webp'
 
 // value images
-import valueImg1 from './assets/valueImg1.png'
-import valueImg2 from './assets/valueImg2.png'
-import valueImg3 from './assets/valueImg3.png'
-import valueImg4 from './assets/valueImg4.png'
-import valueImg5 from './assets/valueImg5.png'
+import valueImg1 from './assets/valueImg1.webp'
+import valueImg2 from './assets/valueImg2.webp'
+import valueImg3 from './assets/valueImg3.webp'
+import valueImg4 from './assets/valueImg4.webp'
+import valueImg5 from './assets/valueImg5.webp'
 
 // our story bg
-import ourStoryBg from './assets/ourStoryBg.png'
+import ourStoryBg from './assets/ourStoryBg.webp'
 
 // team members images
-import teamMemberOne from './assets/member1.png'
-import teamMemberTwo from './assets/member2.png'
-import teamMemberThree from './assets/member3.png'
-import teamMemberFour from './assets/member4.png'
-import teamMemberFive from './assets/member5.png'
-import teamMemberSix from './assets/member6.png'
+import teamMemberOne from './assets/member1.webp'
+import teamMemberTwo from './assets/member2.webp'
+import teamMemberThree from './assets/member3.webp'
+import teamMemberFour from './assets/member4.webp'
+import teamMemberFive from './assets/member5.webp'
+import teamMemberSix from './assets/member6.webp'
 
 // meetpathways images
-import datapathwaycard from './assets/datapathwaycard.png'
-import postsecpathwaycard from './assets/postsecpathwaycard.png'
+import datapathwaycard from './assets/datapathwaycard.webp'
+import postsecpathwaycard from './assets/postsecpathwaycard.webp'
 
 // courses data
 import { coursesData } from './coursesData'
@@ -69,10 +69,14 @@ const data = {
                 title: 'Tier 1 Action Plans & Pre/Post Tests',
                 to: 'actionplans',
               },
+              {
+                title: 'Intentional School Counseling & Tier 2 Interventions',
+                to: 'internationalschoolcounseling',
+              },
             ],
           },
           {
-            title: 'Post Secondary Readiness pathways',
+            title: 'Postsecondary Readiness pathways',
             submenu: [
               {
                 title: 'Postsecondary Readiness for Middle School',
@@ -126,10 +130,11 @@ const data = {
       {
         id: 3,
         title:
-          'Are You a School Counselor in Iowa Looking to Renew Your License?',
+          'Are You a School Counselor in Arizona Looking to Renew Your License?',
         to: 'arizona',
 
-        desc: `Hatching Results courses allow Iowa School Counselors to complete one Iowa License Renewal credit per course. Each course is approved by the Iowa Board of Educational Examiners through the Iowa State Education Association (ISEA) which is a state affiliate of the National Education Association (NEA).`,
+        desc: `Hatching Results partners with California State University San Marcos (CSUSM) to offer courses for school counselors for continued education. These courses allow Arizona School Counselors to complete the 6 semester (credit) hour deficiency to renew their certificates in the three-year window who apply for certification under options B, C, and D.
+`,
         bgImg: headerBg3,
         className: 'arizonaBtn',
       },
@@ -151,14 +156,14 @@ const data = {
         },
         {
           id: 2,
-          title: 'Post Secondary Pathways',
+          title: 'Postsecondary Pathways',
           bgImg: postsecpathwaycard,
         },
       ],
     },
 
     coursesGridData: {
-      leftColItem: coursesData[0],
+      leftColItem: coursesData[6],
       rightColItems: [
         coursesData[1],
         coursesData[2],

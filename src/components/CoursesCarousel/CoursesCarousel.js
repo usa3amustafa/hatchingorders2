@@ -1,6 +1,6 @@
-import addToCart from '../../assets/add-to-cart.png'
+import addToCart from '../../assets/add-to-cart.webp'
 import Stars from '../Stars/Stars'
-import courseCardImg from '../../assets/course-img.jpg'
+import courseCardImg from '../../assets/course-img.webp'
 import { React, useContext } from 'react'
 import AppContext from '../../context/AppContext'
 
@@ -32,18 +32,18 @@ const CoursesCarousel = ({ slidesPerView, courseCards }) => {
           modules={[Navigation, Thumbs]}
           className='course-cards container-2'
         >
-          {coursesData.map(c => {
+          {coursesData.slice(0, 7).map(c => {
             return (
               <SwiperSlide key={c.id} className='course-card'>
                 <div
-                  className='course-card-img new'
+                  className={`course-card-img ${c.new && 'new'}`}
                   style={{ backgroundImage: `url(${c.bgImg})` }}
                 >
                   <button
                     className='course-cta'
                     onClick={() => addOneToCart(c.id)}
                   >
-                    <img src={addToCart} alt='' /> add to cart
+                    <img src={addToCart} alt='' loading='lazy' /> add to cart
                   </button>
                 </div>
                 <Link to={c.to}>
@@ -55,12 +55,10 @@ const CoursesCarousel = ({ slidesPerView, courseCards }) => {
                     </h2>
 
                     <div className='course-desc-info'>
-                      <div className='course-desc-right'>
-                        <Stars />
-                      </div>
-                      <h3 className='course-price'>{`${c.price.toFixed(
-                        2
-                      )}`}</h3>
+                      <div className='course-desc-right'>{/* <Stars /> */}</div>
+                      <h3 className='course-price'>
+                        {Number(c.price) ? `$${c.price.toFixed(2)}` : c.price}
+                      </h3>
                     </div>
                   </div>
                 </Link>

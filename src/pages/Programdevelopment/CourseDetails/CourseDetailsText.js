@@ -28,7 +28,7 @@ const CourseDetailsText = ({ currCourse }) => {
       <h2 className='courseDetailsTitle'>{currCourse.title}</h2>
       {/*  */}
       {/* reviews component */}
-      <div className='courseDetailsReviews'>
+      {/* <div className='courseDetailsReviews'>
         <div className='courseDetailsStars'>
           <Stars />
         </div>
@@ -36,7 +36,7 @@ const CourseDetailsText = ({ currCourse }) => {
           <span className='count'>3</span>
           Customer review
         </p>
-      </div>
+      </div> */}
       {/* course desc component */}
       <div className='courseDesc'>
         {currCourse.courseDesc.desc.map((item, i) => {

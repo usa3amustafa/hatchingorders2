@@ -1,15 +1,20 @@
-import testimonialTextBg from '../../assets/testimonial-text-bg.png'
+import testimonialTextBg from '../../assets/testimonial-text-bg.webp'
 
 const Testimonials = () => {
   return (
     <section className='testimonial-bg'>
       <div className='container testimonial'>
         <h2 className='testimonial-title'>
-          Trusted by agents <br />& customers
+          Trusted by Districts <br />& Counselors
         </h2>
 
         <div className='testimonial-text'>
-          <img src={testimonialTextBg} alt='' className='testimonial-text-bg' />
+          <img
+            src={testimonialTextBg}
+            alt=''
+            className='testimonial-text-bg'
+            loading='lazy'
+          />
 
           <p className='testimonial-text-desc'>
             Taking the Hatching Results Course was one of the best education and

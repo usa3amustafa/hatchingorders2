@@ -1,7 +1,7 @@
-import welcomeIllustration from '../../assets/welcomeIllustration.png'
-import cardOneImg from '../../assets/cardOne.png'
-import cardTwoImg from '../../assets/cardTwo.png'
-import cardThreeImg from '../../assets/cardThree.png'
+import welcomeIllustration from '../../assets/welcomeIllustration.webp'
+import cardOneImg from '../../assets/cardOne.webp'
+import cardTwoImg from '../../assets/cardTwo.webp'
+import cardThreeImg from '../../assets/cardThree.webp'
 import styles from './gettingStarted.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLong } from '@fortawesome/free-solid-svg-icons'
@@ -88,7 +88,7 @@ const GettingStarted = () => {
           <div className='container'>
             <div className={styles.welcome}>
               <div className={styles.welcomeImg}>
-                <img src={welcomeIllustration} alt='' />
+                <img src={welcomeIllustration} alt='' loading='lazy' />
               </div>
               <h2 className={styles.title}>
                 <span className={styles.userName}>John Doe</span>, welcome to
@@ -113,13 +113,13 @@ const GettingStarted = () => {
                 </button>
               </div>
               <div className={styles.cardRightCol}>
-                <img src={cardOneImg} alt='' />
+                <img src={cardOneImg} alt='' loading='lazy' />
               </div>
             </div>
 
             <div className={`${styles.card} ${styles.cardTwo} `}>
               <div className={styles.cardLeftCol}>
-                <img src={cardTwoImg} alt='' />
+                <img src={cardTwoImg} alt='' loading='lazy' />
               </div>
               <div className={styles.cardRightCol}>
                 <h2 className={styles.cardTitle}>Select your Courses</h2>
@@ -148,7 +148,7 @@ const GettingStarted = () => {
                 </button>
               </div>
               <div className={styles.cardRightCol}>
-                <img src={cardThreeImg} alt='' />
+                <img src={cardThreeImg} alt='' loading='lazy' />
               </div>
             </div>
           </div>

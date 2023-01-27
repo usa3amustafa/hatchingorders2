@@ -26,11 +26,11 @@ const CourseDetailsText = ({ currCourse }) => {
     <div className='courseDetailsText'>
       {/* title component */}
       <h2 className='courseDetailsTitle'>
-        {currCourse.title} <span className='ucspan'>UC</span>
+        {currCourse.title} <span className='ucspan'>CEU</span>
       </h2>
       {/*  */}
       {/* reviews component */}
-      <div className='courseDetailsReviews'>
+      {/* <div className='courseDetailsReviews'>
         <div className='courseDetailsStars'>
           <Stars />
         </div>
@@ -38,7 +38,7 @@ const CourseDetailsText = ({ currCourse }) => {
           <span className='count'>3</span>
           Customer review
         </p>
-      </div>
+      </div> */}
 
       {/* course desc component */}
       <div className='courseDesc'>

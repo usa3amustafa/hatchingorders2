@@ -57,7 +57,11 @@ const StepsOne = () => {
                 University Credits by taking Hatching Results online courses!
               </p>
 
-              <a href='#' className='cta-sec secClr'>
+              <a
+                href='https://hatchingorders.com/public/university-credits'
+                target='_blank'
+                className='cta-sec secClr'
+              >
                 visit site <FontAwesomeIcon icon={faRightLong} />
               </a>
             </div>
@@ -79,7 +83,11 @@ const StepsOne = () => {
                 Course is not eligible for University Credit.
               </p>
 
-              <a href='#' className='cta-sec secClr'>
+              <a
+                href='https://hatchingorders.com/public/university-credits'
+                target='_blank'
+                className='cta-sec secClr'
+              >
                 visit site <FontAwesomeIcon icon={faRightLong} />
               </a>
             </div>
@@ -94,7 +102,11 @@ const StepsOne = () => {
                 1 University Credit for each 15-hour Hatching Results Course.
               </p>
 
-              <a href='#' className='cta-sec secClr'>
+              <a
+                href='https://hatchingorders.com/public/university-credits'
+                target='_blank'
+                className='cta-sec secClr'
+              >
                 visit site <FontAwesomeIcon icon={faRightLong} />
               </a>
             </div>

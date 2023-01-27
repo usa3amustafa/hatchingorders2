@@ -1,4 +1,4 @@
-import logoWhite from '../../../assets/logoWhite.png'
+import logoWhite from '../../../assets/logoWhite.webp'
 import Modal from '../../shared/Modal/Modal'
 
 import errorModal from '../../../assets/errorModal.svg'
@@ -10,11 +10,11 @@ const ErrorModal = () => {
     <Modal type='error'>
       <div className='errorModal'>
         <div className='logoWhite'>
-          <img src={logoWhite} alt='' className='logoWhiteImg' />
+          <img src={logoWhite} alt='' className='logoWhiteImg' loading='lazy' />
         </div>
 
         <div className='errorImg'>
-          <img src={errorModal} alt='' />
+          <img src={errorModal} alt='' loading='lazy' />
         </div>
 
         <h2 className='thankyouModalTitle'>Something Went Wrong!</h2>

@@ -1,4 +1,4 @@
-import rightColSlide1 from '../../../assets/rightColSlide1.png'
+import rightColSlide1 from '../../../assets/rightColSlide1.webp'
 
 const slidesData = [
   {

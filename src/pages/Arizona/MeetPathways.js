@@ -15,24 +15,24 @@ const MeetPathways = () => {
     postsecondaryreadiness,
     programdevelopment,
     purposefulprograms,
+    internationalschoolc,
+    reportingresults,
+    sysofchange,
+    miracleschallanges,
     openPathwaysModal,
   } = useContext(AppContext)
 
-  const schoolcounceling = [datadatadata, actionplans, timeManagement]
-
-  const multicultural = [
-    postsecondaryreadiness,
-    programdevelopment,
-    purposefulprograms,
-    postsecondaryreadiness,
-    programdevelopment,
-    purposefulprograms,
-    postsecondaryreadiness,
-    programdevelopment,
-    purposefulprograms,
+  const schoolcounceling = [
+    datadatadata,
+    actionplans,
+    timeManagement,
+    internationalschoolc,
+    reportingresults,
   ]
 
-  const arr3 = [postsecondaryreadiness, programdevelopment, purposefulprograms]
+  const multicultural = [sysofchange]
+
+  const arr3 = [miracleschallanges]
 
   const [currArr, setCurrArr] = useState(schoolcounceling)
 
@@ -74,7 +74,12 @@ const MeetPathways = () => {
           >
             {currArr.map(item => {
               return (
-                <CourseCard id={item.id} courseData={item} isGridItem={false} />
+                <CourseCard
+                  key={item.id}
+                  id={item.id}
+                  courseData={item}
+                  isGridItem={false}
+                />
               )
             })}
           </div>

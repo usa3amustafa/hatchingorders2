@@ -1,4 +1,4 @@
-import cartItemImg from '../../../assets/ourMission.png'
+import cartItemImg from '../../../assets/ourMission.webp'
 import { faMinus, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -29,7 +29,12 @@ const CartItem = () => {
             <div className='cartItem' key={item.id}>
               <div className='cartItemInfo'>
                 <div className='cartItemImg'>
-                  <img src={cartItemImg} alt='' className='cartItemImgImg' />
+                  <img
+                    src={cartItemImg}
+                    alt=''
+                    className='cartItemImgImg'
+                    loading='lazy'
+                  />
                 </div>
                 <div className='cartItemText'>
                   <h2 className='cartItemTitle'>{courseItem.title}</h2>

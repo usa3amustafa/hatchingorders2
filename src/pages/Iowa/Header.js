@@ -3,7 +3,7 @@ import NavMain from '../../components/Nav/NavMain'
 import { headerSliderData } from './homeData'
 import { useContext } from 'react'
 import AppContext from '../../context/AppContext'
-import iowaHeaderImg1 from '../../assets/iowaHeader1.png'
+import iowaHeaderImg1 from '../../assets/iowaHeader1.webp'
 
 function Header() {
   const { openNavtop } = useContext(AppContext)
