@@ -86,7 +86,7 @@ const SignupModal = () => {
 
   return (
     <>
-      <h2 className="registrationModalTitle">Create ac hree</h2>
+      <h2 className="registrationModalTitle">Create account</h2>
 
       {/* form */}
       <form onSubmit={handleSubmit}>
