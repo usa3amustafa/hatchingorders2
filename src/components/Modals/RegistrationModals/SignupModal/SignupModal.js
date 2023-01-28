@@ -46,10 +46,7 @@ const SignupModal = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post(
-        'http://127.0.0.1:3000/user/register',
-        formData
-      );
+      const response = await axios.post('/user/register', formData);
       console.log(response.data);
       console.log(response.message);
       console.log(response.status);
