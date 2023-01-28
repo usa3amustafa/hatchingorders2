@@ -47,7 +47,7 @@ const SignupModal = () => {
     console.log(formData);
     try {
       const response = await axios.post(
-        'http:127.0.0.1:3000/user/register',
+        'http://127.0.0.1:3000/user/register',
         formData
       );
       console.log(response.data);
