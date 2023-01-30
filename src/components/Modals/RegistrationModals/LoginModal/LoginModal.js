@@ -10,9 +10,13 @@ const LoginModal = () => {
   const {
     openSignupModal,
     openForgotPassModal,
-    openSuccessModal,
     closeModal,
-    openErrorModal,
+    openLoggedInModal,
+    openVerificationModal,
+    openNotFound,
+    openDataIncorrect,
+    setInternalServerError,
+    setLoggedIn,
   } = useContext(AppContext)
 
   const [type, setType] = useState('password')
@@ -39,13 +43,20 @@ const LoginModal = () => {
     try {
       const response = await axios.post('/user/login', formData)
 
-      if (response.data.status === 200) {
+      if (response.status === 200) {
         // show you are logged in modal
         closeModal()
-        localStorage.setItem('user', JSON.stringify(response.data.name))
+        localStorage.setItem('fullname', JSON.stringify(response.data.fullname))
         localStorage.setItem('email', JSON.stringify(response.data.email))
         localStorage.setItem('token', JSON.stringify(response.data.token))
         localStorage.setItem('userid', JSON.stringify(response.data.userid))
+        openLoggedInModal()
+
+        console.log(localStorage.getItem('token'))
+
+        if (localStorage.getItem('token')) {
+          setLoggedIn(true)
+        }
       }
 
       console.log(response)
@@ -54,15 +65,20 @@ const LoginModal = () => {
       // 405 please verify your email
       if (err.response.status === 405) {
         console.log('please verify your email')
+        openVerificationModal()
       }
       if (err.response.status === 404) {
         console.log('user not found ')
+        openNotFound()
       }
       if (err.response.status === 401) {
         console.log('password or email is incorrect')
+        openDataIncorrect()
       }
       if (err.response.status === 500) {
         console.log('internal server error')
+        closeModal()
+        setInternalServerError(true)
       }
       // 404 user not found please sign up
       // email is not verifed 405

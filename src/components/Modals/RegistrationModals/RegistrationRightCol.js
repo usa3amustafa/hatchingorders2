@@ -3,27 +3,27 @@ import slidesData from './rightcolSliderData'
 import logo from '../../../assets/hatchfulLogo.webp'
 
 const RegistrationRightCol = () => {
-  const [slides, setSlides] = useState(slidesData)
-  const [index, setIndex] = useState(0)
+  // const [slides, setSlides] = useState(slidesData)
+  // const [index, setIndex] = useState(0)
 
-  useEffect(() => {
-    const lastIndex = slides.length - 1
-    if (index < 0) {
-      setIndex(lastIndex)
-    }
-    if (index > lastIndex) {
-      setIndex(0)
-    }
-  }, [index, slides])
+  // useEffect(() => {
+  //   const lastIndex = slides.length - 1
+  //   if (index < 0) {
+  //     setIndex(lastIndex)
+  //   }
+  //   if (index > lastIndex) {
+  //     setIndex(0)
+  //   }
+  // }, [index, slides])
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1)
-    }, 5000)
-    return () => {
-      clearInterval(slider)
-    }
-  }, [index])
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setIndex(index + 1)
+  //   }, 5000)
+  //   return () => {
+  //     clearInterval(slider)
+  //   }
+  // }, [index])
 
   return (
     <section className='registrationModalRightCol'>

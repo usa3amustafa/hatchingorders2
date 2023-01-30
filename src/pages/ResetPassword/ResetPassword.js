@@ -1,14 +1,28 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import AppContext from '../../context/AppContext'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
 
+import SuccessModal from '../../components/Modals/SuccessModal/SuccessModal'
+import ErrorModal from '../../components/Modals/ErrorModal/ErrorModal'
 import './resetPassword.css'
 
 import axios from 'axios'
 
 const ResetPassword = () => {
+  const {
+    passwordChanged,
+    setPasswordChanged,
+    passNotMatch,
+    setPassNotMatch,
+    tokenNotAuthenticated,
+    setTokenNotAuthenticated,
+    failedPassUpdate,
+    setFailedPassUpdate,
+    closeModal,
+  } = useContext(AppContext)
+
   const [type, setType] = useState('password')
   const [icon, setIcon] = useState(faEye)
   const [error, setError] = useState(true)
@@ -48,17 +62,23 @@ const ResetPassword = () => {
       console.log(response)
       if (response.status === 200) {
         console.log('password reset succesfully')
+        closeModal()
+        setPasswordChanged(true)
       }
     } catch (err) {
       console.error(err)
       if (err.response.status === 401) {
         console.log('passwords donot match')
+        setPassNotMatch(true)
       } else if (err.response.status === 498) {
         console.log('token cannot be authenticated')
+        setTokenNotAuthenticated(true)
       } else if (err.response.status === 402) {
         console.log('token cannot be authenticated')
+        // confirm this
       } else if (err.response.status === 403) {
         console.log('failed to update password')
+        setFailedPassUpdate(true)
       }
       // 401 passwords donont match
       // 498 token cannot be authenticated
@@ -140,6 +160,31 @@ const ResetPassword = () => {
           </div>
         </form>
       </div>
+      {/* forgot password */}
+      {passwordChanged && (
+        <SuccessModal
+          msg='Password changed succesfully'
+          desc='Please use the updated password to login in the future'
+        />
+      )}
+      {passNotMatch && (
+        <ErrorModal
+          msg='Passwords donot match'
+          desc='please double check the passwords'
+        />
+      )}
+      {tokenNotAuthenticated && (
+        <ErrorModal
+          msg='Invalid Token'
+          desc='please check your mail for the reset pasword link'
+        />
+      )}
+      {failedPassUpdate && (
+        <ErrorModal
+          msg='Failed password update'
+          desc='please try again later'
+        />
+      )}
     </>
   )
 }

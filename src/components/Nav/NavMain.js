@@ -16,6 +16,7 @@ import Thankyou from '../Modals/ThankyouModal/Thankyou'
 import RegistrationModal from '../Modals/RegistrationModals/RegistrationModal'
 import SuccessModal from '../Modals/SuccessModal/SuccessModal'
 import ErrorModal from '../Modals/ErrorModal/ErrorModal'
+import Contactus from '../Contactus/Contactus'
 
 const NavMain = () => {
   const {
@@ -27,8 +28,15 @@ const NavMain = () => {
     showRegistration,
     openRegistrationModal,
     showThankyou,
-    successModal,
-    errorModal,
+    internalServerError,
+    registered,
+    contactusModal,
+    loggedInModal,
+    verifyEmail,
+    notfound,
+    dataIncorrect,
+    emailSent,
+    emailNotFound,
   } = useContext(AppContext)
 
   const cartTotalItems = cartProducts.reduce(
@@ -83,9 +91,54 @@ const NavMain = () => {
 
       {showCartModal && <CheckoutModal />}
       {showThankyou && <Thankyou />}
+      {contactusModal && <Contactus />}
+      {/* signup modals */}
       {showRegistration && <RegistrationModal />}
-      {successModal && <SuccessModal />}
-      {errorModal && <ErrorModal />}
+      {registered && (
+        <SuccessModal
+          msg='Please Check Your Inbox With verification Email'
+          desc='You have been Registered Successfuly'
+        />
+      )}
+      {internalServerError && (
+        <ErrorModal msg='Something went wrong' desc='Please try again later' />
+      )}
+      {/* logged in modals */}
+      {loggedInModal && (
+        <SuccessModal msg='Logged In' desc='You have successfuly logged in' />
+      )}
+      {verifyEmail && (
+        <SuccessModal
+          msg='Verification Required'
+          desc='Please check your mail to verify your email'
+        />
+      )}
+      {notfound && (
+        <ErrorModal
+          msg='Not Found'
+          desc='Sorry not account was found for the email you entered'
+        />
+      )}
+      {dataIncorrect && (
+        <ErrorModal
+          msg='Incorrect Password or Email'
+          desc='Kindly check Your Login Credentials'
+        />
+      )}
+
+      {/* forgot password */}
+      {emailSent && (
+        <SuccessModal
+          msg='An email with instructions has been sent'
+          desc='Please check your mail for more instructions'
+        />
+      )}
+      {emailNotFound && (
+        <ErrorModal
+          msg='Email not found'
+          desc='No account found against the enetered email'
+        />
+      )}
     </>
   )
 }

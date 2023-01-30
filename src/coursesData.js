@@ -740,13 +740,14 @@ financial aid information to students and their families`,
 
 export const getCourseData = id => {
   const courseData = coursesData.find(item => {
-    if (item.id === id)
+    if (item.id === id) {
       return {
         id: item.id,
         quantity: item.quantity,
         price: item.price,
         title: item.title,
       }
+    }
   })
   return courseData
 }

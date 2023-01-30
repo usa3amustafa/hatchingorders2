@@ -16,12 +16,36 @@ export const AppProvider = ({ children }) => {
   const [showLogin, setShowLogin] = useState(false)
   const [showForgotPass, setShowForgotPass] = useState(false)
 
-  const [successModal, setSuccessModal] = useState(false)
-  const [errorModal, setErrorModal] = useState(false)
-
+  const [contactusModal, setContactusModal] = useState(false)
   const [videoModal, setVideoModel] = useState(false)
-
   const [pathwaysModal, setPathwaysModal] = useState(false)
+
+  // signup error handling
+  const [registered, setRegistered] = useState(false)
+  const [internalServerError, setInternalServerError] = useState(false)
+
+  // user logged in state
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  // login error handling
+  const [loggedInModal, setLoggedInModal] = useState(false)
+  const [verifyEmail, setVerifyEmail] = useState(false)
+  const [notfound, setNotfound] = useState(false)
+  const [dataIncorrect, setDataIncorrect] = useState(false)
+
+  // forgot password
+  const [emailSent, setEmailSent] = useState(false)
+  const [emailNotFound, setEmailNotFound] = useState(false)
+
+  // reset password changed
+  const [passwordChanged, setPasswordChanged] = useState(false)
+  const [passNotMatch, setPassNotMatch] = useState(false)
+  const [tokenNotAuthenticated, setTokenNotAuthenticated] = useState(false)
+  const [failedPassUpdate, setFailedPassUpdate] = useState(false)
+
+  // invoive me
+
+  // stripe
 
   // courses
   const datadatadata = coursesData.find(course => {
@@ -76,10 +100,22 @@ export const AppProvider = ({ children }) => {
     setShowRegistration(false)
     setShowLogin(false)
     setShowForgotPass(false)
-    setSuccessModal(false)
-    setErrorModal(false)
+    setRegistered(false)
+    setInternalServerError(false)
     setVideoModel(false)
     setPathwaysModal(false)
+    setContactusModal(false)
+    setLoggedInModal(false)
+    setVerifyEmail(false)
+    setNotfound(false)
+    setDataIncorrect(false)
+    setEmailSent(false)
+    setEmailNotFound(false)
+    setPasswordChanged(false)
+    setPassNotMatch(false)
+    setTokenNotAuthenticated(false)
+    setFailedPassUpdate(false)
+
     // true because it doesnot trigger the modal to open it only activates the signup modal in the left col if the registration modal
     setShowSignup(true)
   }
@@ -99,14 +135,9 @@ export const AppProvider = ({ children }) => {
     setShowThankyou(true)
   }
 
-  // open success modal
-  const openSuccessModal = () => {
-    setSuccessModal(true)
-  }
-
   // open error modal
-  const openErrorModal = () => {
-    setErrorModal(true)
+  const openContactusModal = () => {
+    setContactusModal(true)
   }
 
   //open data video modal
@@ -117,6 +148,30 @@ export const AppProvider = ({ children }) => {
   //open pathways  modal
   const openPathwaysModal = () => {
     setPathwaysModal(true)
+  }
+
+  // open email verification modal
+  const openVerificationModal = () => {
+    closeModal()
+    setVerifyEmail(true)
+  }
+
+  // open logged in modal
+  const openLoggedInModal = () => {
+    closeModal()
+    setLoggedInModal(true)
+  }
+
+  // open not found in modal
+  const openNotFound = () => {
+    closeModal()
+    setNotfound(true)
+  }
+
+  // open data incorrect in modal
+  const openDataIncorrect = () => {
+    closeModal()
+    setDataIncorrect(true)
   }
 
   // for navbar style change on scroll
@@ -296,10 +351,8 @@ export const AppProvider = ({ children }) => {
         openLoginModal,
         openSignupModal,
         openForgotPassModal,
-        successModal,
-        openSuccessModal,
-        errorModal,
-        openErrorModal,
+        registered,
+        setRegistered,
         postsecondaryreadiness,
         programdevelopment,
         purposefulprograms,
@@ -311,6 +364,33 @@ export const AppProvider = ({ children }) => {
         reportingresults,
         sysofchange,
         miracleschallanges,
+        contactusModal,
+        openContactusModal,
+        internalServerError,
+        setInternalServerError,
+        loggedInModal,
+        verifyEmail,
+        notfound,
+        dataIncorrect,
+        openLoggedInModal,
+        openVerificationModal,
+        openNotFound,
+        openDataIncorrect,
+        loggedIn,
+        setLoggedIn,
+        emailSent,
+        setEmailSent,
+        emailNotFound,
+        setEmailNotFound,
+        passwordChanged,
+        setPasswordChanged,
+        passNotMatch,
+        setPassNotMatch,
+        tokenNotAuthenticated,
+        setTokenNotAuthenticated,
+        failedPassUpdate,
+        setFailedPassUpdate,
+        getCourseData,
       }}
     >
       {children}

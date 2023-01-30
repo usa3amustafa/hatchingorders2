@@ -452,31 +452,6 @@
   position: relative;
 }
 
-.timer-el::before {
-  content: '';
-  position: absolute;
-  bottom: -35%;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: var(--pri-clr);
-}
-
-.days::before {
-  content: 'days';
-}
-
-.hours::before {
-  content: 'hours';
-}
-
-.minutes::before {
-  content: 'minutes';
-}
-
-.seconds::before {
-  content: 'seconds';
-}
-
 .sale-right-img {
   width: 20rem;
   height: 20rem;

@@ -5,7 +5,7 @@ import errorModal from '../../../assets/errorModal.svg'
 
 import './errorModal.css'
 
-const ErrorModal = () => {
+const ErrorModal = ({ msg, desc }) => {
   return (
     <Modal type='error'>
       <div className='errorModal'>
@@ -17,9 +17,9 @@ const ErrorModal = () => {
           <img src={errorModal} alt='' loading='lazy' />
         </div>
 
-        <h2 className='thankyouModalTitle'>Something Went Wrong!</h2>
+        <h2 className='thankyouModalTitle'>{msg}</h2>
 
-        <h2 className='thankyouModalSubtitle'>Please try again later.</h2>
+        <h2 className='thankyouModalSubtitle'>{desc}</h2>
       </div>
     </Modal>
   )

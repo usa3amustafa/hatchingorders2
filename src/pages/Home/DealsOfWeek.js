@@ -1,5 +1,6 @@
 import CoursesCarousel from '../../components/CoursesCarousel/CoursesCarousel'
 import addToCart from '../../assets/add-to-cart.webp'
+import Timer from '../../components/timer/Timer'
 
 const DealsOfWeek = () => {
   return (
@@ -11,18 +12,7 @@ const DealsOfWeek = () => {
             <h2 className='deals-title'>deals of the week</h2>
 
             {/* timer */}
-            <div className='timer'>
-              <p className='timer-el days'>01</p>
-              <p className='colon'>:</p>
-
-              <p className='timer-el hours'>23</p>
-              <p className='colon'>:</p>
-
-              <p className='timer-el minutes'>43</p>
-              <p className='colon'>:</p>
-
-              <p className='timer-el seconds'>12</p>
-            </div>
+            <Timer />
 
             <a href='#' className='cta'>
               <img src={addToCart} alt='' loading='lazy' /> $25% Off

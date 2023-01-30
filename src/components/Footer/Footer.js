@@ -6,7 +6,11 @@ import visaIcon from '../../assets/visa.webp'
 import mastercardIcon from '../../assets/masterCard.webp'
 import aExpressIcon from '../../assets/aExpress.webp'
 
+import { useContext } from 'react'
+import AppContext from '../../context/AppContext'
+
 function Footer({ className }) {
+  const { openContactusModal } = useContext(AppContext)
   return (
     <footer className={className}>
       <div className={`container footer ${className}`}>
@@ -46,9 +50,9 @@ function Footer({ className }) {
             {/* <a href='#' className='footerLink'>
               Refunds and Returns
             </a> */}
-            <a href='#' className='footerLink'>
+            <p className='footerLink' onClick={openContactusModal}>
               Contact Us
-            </a>
+            </p>
             <a href='#' className='footerLink'>
               Sitemap
             </a>

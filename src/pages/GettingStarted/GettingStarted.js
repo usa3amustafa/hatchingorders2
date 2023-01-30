@@ -81,6 +81,8 @@ const GettingStarted = () => {
 
   verifyApi()
 
+  console.log(tokenVerified)
+
   return (
     <>
       {tokenVerified === 'verified' && (

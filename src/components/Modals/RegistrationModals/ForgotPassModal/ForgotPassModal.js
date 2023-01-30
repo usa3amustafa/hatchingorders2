@@ -1,21 +1,17 @@
 import { useState, useContext } from 'react'
 import AppContext from '../../../../context/AppContext'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
-
 import axios from 'axios'
 
 const ForgotPassModal = () => {
-  const { openLoginModal, openSignupModal } = useContext(AppContext)
+  const {
+    openLoginModal,
+    openSignupModal,
+    setEmailSent,
+    setEmailNotFound,
+    closeModal,
+  } = useContext(AppContext)
 
-  const [type, setType] = useState('password')
-  const [icon, setIcon] = useState(faEye)
-
-  // const [formData, setFormData] = useState({
-  //   password: '',
-  //   repeatPassword: '',
-  // })
   const [formData, setFormData] = useState({
     email: '',
   })
@@ -37,24 +33,17 @@ const ForgotPassModal = () => {
     console.log(formData)
     try {
       const response = await axios.post('/user/forgetpassword', formData)
-      if (response.status.data === 200) {
+      if (response.status === 200) {
         console.log('email send successfully')
+        closeModal()
+        setEmailSent(true)
       }
       console.log(response)
     } catch (err) {
       console.error(err)
+      setEmailNotFound(true)
     }
   }
-
-  // const handleToggle = () => {
-  //   if (type === 'password') {
-  //     setIcon(faEye)
-  //     setType('text')
-  //   } else {
-  //     setIcon(faEyeSlash)
-  //     setType('password')
-  //   }
-  // }
 
   return (
     <>

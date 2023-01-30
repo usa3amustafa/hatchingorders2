@@ -743,6 +743,7 @@ footer {
 .footerLink {
   font-size: 0.9rem;
   color: var(--pri-clr);
+  cursor: pointer;
 }
 
 .footerColDesc {
@@ -1501,4 +1502,33 @@ footer {
 
 .whiteClr {
   color: var(--white);
+}
+
+/* contactus left col */
+#message {
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  resize: none;
+  line-height: 1.6;
+}
+
+button:disabled {
+  background-color: var(--sec-clr-light);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.login-first-title {
+  text-align: center;
+  font-weight: 500;
+  padding: 0 1rem;
+  text-transform: capitalize;
 }
