@@ -116,16 +116,19 @@ const data = {
         subTitle: 'Learn from the Best',
         desc: `Want to learn something new? Check out our selection of high quality online courses from the best online instructors in counseling. Develop your skills and knowledge today!`,
         bgImg: headerBg1,
+        to: '/',
+        className: 'homeLink',
+        subdomain: 'https://www.hatchingorders.com',
       },
       {
         id: 2,
         title:
           'Are You a School Counselor in Iowa Looking to Renew Your License?',
         to: 'iowa',
-
         desc: `Hatching Results courses allow Iowa School Counselors to complete one Iowa License Renewal credit per course. Each course is approved by the Iowa Board of Educational Examiners through the Iowa State Education Association (ISEA) which is a state affiliate of the National Education Association (NEA).`,
         bgImg: headerBg2,
         className: 'iowaBtn',
+        subdomain: 'https://iowa.hatchingorders.com',
       },
       {
         id: 3,
@@ -137,6 +140,7 @@ const data = {
 `,
         bgImg: headerBg3,
         className: 'arizonaBtn',
+        subdomain: 'https://arizona.hatchingorders.com',
       },
     ],
 

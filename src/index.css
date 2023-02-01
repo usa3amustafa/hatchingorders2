@@ -97,6 +97,7 @@ button {
   align-items: center;
   gap: 0.25rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .cta-bg-sec {

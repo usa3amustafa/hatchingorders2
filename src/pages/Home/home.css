@@ -47,10 +47,10 @@
   transform: translateX(0);
 }
 .header-text-home.lastSlidehome {
-  transform: translateX(-50%);
+  transform: translateX(-100%);
 }
 .header-text-home.nextSlidehome {
-  transform: translateX(50%);
+  transform: translateX(100%);
 }
 
 .header-text-title-home {

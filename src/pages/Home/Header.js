@@ -63,12 +63,13 @@ function Header() {
                   )}
 
                   <p className='header-text-desc-home'>{item.desc}</p>
-                  <Link
-                    to={item.to}
-                    className={`cta cta-pri ${item.className}`}
+                  <a
+                    href={item.subdomain}
+                    target='_blank'
+                    className={`cta ${item.className}`}
                   >
                     explore more
-                  </Link>
+                  </a>
                 </div>
               )
             })}

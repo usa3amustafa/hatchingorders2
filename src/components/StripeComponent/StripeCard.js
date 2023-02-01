@@ -9,6 +9,7 @@ import axios from 'axios'
 import CardSection from './CardSection'
 
 export default function StripeCard() {
+  const [discount, setDiscount] = useState('')
   const stripe = useStripe()
   const elements = useElements()
   const [clientSecret, setClientSecret] = useState(null)
@@ -94,10 +95,27 @@ export default function StripeCard() {
     }
   }
 
+  const handleDiscountChange = e => {
+    setDiscount(e.target.value)
+  }
+
   return (
     <form onSubmit={handleSubmit}>
+      <div className='form-el'>
+        <label htmlFor='email' className='inputLabel'>
+          DISCOUNT CODE IF APPLICABLE
+        </label>
+        <input
+          type='text'
+          name='discount'
+          className='registrationInput'
+          onChange={handleDiscountChange}
+          value={discount}
+        />
+        {/* email not found error message */}
+      </div>
       <CardSection />
-      <button disabled={!stripe} className='cta'>
+      <button disabled={!stripe} className='cta cta-bg-sec'>
         Confirm order
       </button>
     </form>
