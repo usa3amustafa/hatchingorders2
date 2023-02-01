@@ -5,12 +5,11 @@ import Cart from './Cart'
 import PaymentMethods from './PaymentMethods'
 import { useContext } from 'react'
 import AppContext from '../../../context/AppContext'
-import logoImg from '../../../assets/hatchfulLogo.webp'
 
 import './checkoutModal.css'
 
 const Index = () => {
-  const { loggedIn, closeModal, openRegistrationModal } = useContext(AppContext)
+  const { closeModal, openRegistrationModal } = useContext(AppContext)
   const openLoginModal = () => {
     closeModal()
     openRegistrationModal()
@@ -23,7 +22,7 @@ const Index = () => {
         <Cart />
       </div>
       <div className='checkoutModalRightCol'>
-        {loggedIn ? (
+        {localStorage.getItem('loggedIn') ? (
           <PaymentMethods />
         ) : (
           <section className='bg-grey flex-column'>

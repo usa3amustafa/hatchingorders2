@@ -16,6 +16,7 @@ const LoginModal = () => {
     openNotFound,
     openDataIncorrect,
     setInternalServerError,
+    loggedIn,
     setLoggedIn,
   } = useContext(AppContext)
 
@@ -50,12 +51,14 @@ const LoginModal = () => {
         localStorage.setItem('email', JSON.stringify(response.data.email))
         localStorage.setItem('token', JSON.stringify(response.data.token))
         localStorage.setItem('userid', JSON.stringify(response.data.userid))
+
         openLoggedInModal()
 
         console.log(localStorage.getItem('token'))
 
         if (localStorage.getItem('token')) {
           setLoggedIn(true)
+          localStorage.setItem('loggedIn', true)
         }
       }
 
@@ -67,23 +70,22 @@ const LoginModal = () => {
         console.log('please verify your email')
         openVerificationModal()
       }
+      // 404
       if (err.response.status === 404) {
         console.log('user not found ')
         openNotFound()
       }
+      // 401
       if (err.response.status === 401) {
         console.log('password or email is incorrect')
         openDataIncorrect()
       }
+      // 500
       if (err.response.status === 500) {
         console.log('internal server error')
         closeModal()
         setInternalServerError(true)
       }
-      // 404 user not found please sign up
-      // email is not verifed 405
-      // user name or password is incorrect 401
-      // 500 internal server error
     }
   }
 

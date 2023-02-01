@@ -1,0 +1,8 @@
+.logoutUsername {
+  text-transform: uppercase;
+}
+
+.logoutEmail {
+  text-transform: lowercase;
+  font-size: 0.9rem;
+}

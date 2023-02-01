@@ -67,3 +67,31 @@
   opacity: 1;
   padding: 0 2rem 1rem 2rem;
 }
+
+.link {
+  color: var(--link-clr);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th {
+  width: 150px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+td {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+table,
+td,
+tr,
+th {
+  border: 1px solid var(--grey-clr-2);
+  padding: 0.5rem 1rem;
+}

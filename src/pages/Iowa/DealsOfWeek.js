@@ -14,7 +14,7 @@ const DealsOfWeek = ({ className }) => {
 
             <a
               className='cta'
-              href='https://www.isea.org/roland-and-dorothy-ross-scholarship'
+              href=' https://isea.org/isea-awards-scholarships/'
               target='_blank'
             >
               Apply Now

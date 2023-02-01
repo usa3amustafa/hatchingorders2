@@ -8,6 +8,7 @@ import {
 import styles from './faq.module.css'
 
 import { useState } from 'react'
+import PricingTable from '../PricingTable/PricingTable'
 
 const Faq = ({ faqItems }) => {
   const [selected, setSelected] = useState(null)
@@ -53,12 +54,19 @@ const Faq = ({ faqItems }) => {
                 } `}
               >
                 {item.desc}
+                {item.link && (
+                  <a className={styles.link} href={item.href} target='_blank'>
+                    {item.link}
+                  </a>
+                )}
 
                 {item.note && (
                   <>
                     <span className='courseDescNote'>{item.note}</span>
                   </>
                 )}
+
+                {item.pricingTable && <PricingTable />}
               </p>
             )}
           </div>

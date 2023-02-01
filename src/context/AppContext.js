@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react'
 import { coursesData, getCourseData } from '../coursesData'
+import { useNavigate } from 'react-router-dom'
 
 const AppContext = createContext()
 
@@ -42,6 +43,15 @@ export const AppProvider = ({ children }) => {
   const [passNotMatch, setPassNotMatch] = useState(false)
   const [tokenNotAuthenticated, setTokenNotAuthenticated] = useState(false)
   const [failedPassUpdate, setFailedPassUpdate] = useState(false)
+  const [tokenExpired, setTokenExpired] = useState(false)
+
+  // logout modal
+  const [logoutModal, setLogoutModal] = useState(false)
+  const [loggedOut, setLoggedOut] = useState(false)
+  const [logoutPrb, setLogoutPrb] = useState(false)
+
+  // getting started
+  const [emailSentVer, setEmailSentVer] = useState(false)
 
   // invoive me
 
@@ -88,6 +98,8 @@ export const AppProvider = ({ children }) => {
     return course.id === 10
   })
 
+  // redirect to home
+
   // close nav top
   const closeNavtop = () => {
     setOpenNavtop(false)
@@ -106,15 +118,20 @@ export const AppProvider = ({ children }) => {
     setPathwaysModal(false)
     setContactusModal(false)
     setLoggedInModal(false)
+    setLogoutModal(false)
     setVerifyEmail(false)
     setNotfound(false)
     setDataIncorrect(false)
     setEmailSent(false)
+    setEmailSentVer(false)
     setEmailNotFound(false)
     setPasswordChanged(false)
     setPassNotMatch(false)
     setTokenNotAuthenticated(false)
     setFailedPassUpdate(false)
+    setLoggedOut(false)
+    setLogoutPrb(false)
+    setTokenExpired(false)
 
     // true because it doesnot trigger the modal to open it only activates the signup modal in the left col if the registration modal
     setShowSignup(true)
@@ -172,6 +189,11 @@ export const AppProvider = ({ children }) => {
   const openDataIncorrect = () => {
     closeModal()
     setDataIncorrect(true)
+  }
+
+  //open registration modal
+  const openLogoutModal = () => {
+    setLogoutModal(true)
   }
 
   // for navbar style change on scroll
@@ -380,6 +402,8 @@ export const AppProvider = ({ children }) => {
         setLoggedIn,
         emailSent,
         setEmailSent,
+        emailSentVer,
+        setEmailSentVer,
         emailNotFound,
         setEmailNotFound,
         passwordChanged,
@@ -391,6 +415,14 @@ export const AppProvider = ({ children }) => {
         failedPassUpdate,
         setFailedPassUpdate,
         getCourseData,
+        logoutModal,
+        openLogoutModal,
+        loggedOut,
+        setLoggedOut,
+        logoutPrb,
+        setLogoutPrb,
+        tokenExpired,
+        setTokenExpired,
       }}
     >
       {children}

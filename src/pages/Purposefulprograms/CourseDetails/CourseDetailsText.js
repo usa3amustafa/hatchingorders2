@@ -89,7 +89,7 @@ const CourseDetailsText = ({ currCourse }) => {
         </div>
       </div>
       {/* sec controls component */}
-      <div className='courseDetailsSecControls'>
+      {/* <div className='courseDetailsSecControls'>
         <a href='#' className='cta-sec'>
           <FontAwesomeIcon icon={faHeart} />
           add to wishlist
@@ -98,8 +98,8 @@ const CourseDetailsText = ({ currCourse }) => {
         <a href='#' className='cta-sec'>
           <FontAwesomeIcon icon={faShare} />
           share
-        </a>
-      </div>
+        </a> 
+      </div>*/}
       {/* faq */}
       <Faq faqItems={currCourse.faqItems} />
     </div>

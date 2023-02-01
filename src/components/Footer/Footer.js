@@ -31,7 +31,11 @@ function Footer({ className }) {
             >
               San Marcos
             </a>
-            <a href='#' className='footerLink'>
+            <a
+              href='https://www.csusm.edu/el/courses/professionaldevelopment.html'
+              target='_blank'
+              className='footerLink'
+            >
               Blog
             </a>
             <a href='#' className='footerLink'>

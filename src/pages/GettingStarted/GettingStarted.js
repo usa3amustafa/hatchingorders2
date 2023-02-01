@@ -7,13 +7,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightLong } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../../components/Footer/Footer'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
+import AppContext from '../../context/AppContext'
+
+import { useNavigate } from 'react-router-dom'
 
 const GettingStarted = () => {
+  const { setEmailSentVer, openLoginModal, closeModal } = useContext(AppContext)
+
   const [token, setUrlValue] = useState()
   const [tokenVerified, setTokenVerified] = useState('')
   const [email, setEmail] = useState('')
+  const [redirect, setRedirect] = useState(false)
 
   const formData = {
     token,
@@ -33,18 +39,22 @@ const GettingStarted = () => {
         console.log(response)
         setTokenVerified('verified')
       }
-      // 200 success show get started
-
-      //
     } catch (err) {
-      console.error(err)
+      console.error(err.response.status)
       if (err.response.status === 404) {
         setTokenVerified('invalid')
       } else if (err.response.status === 401) {
         setTokenVerified('expired')
+      } else if (err.response.status === 404) {
+        setTokenVerified('empty')
+      } else if (err.response.status === 401) {
+        setTokenVerified('expired')
+      } else if (err.response.status === 406) {
+        setTokenVerified('already-verified')
+        setRedirect(true)
+      } else if (err.response.status === 500) {
+        setTokenVerified('error')
       }
-      // 404 token invalid  token not valid
-      // 401 token expired  token not valid
     }
   }
   const resendEmail = async () => {
@@ -52,26 +62,17 @@ const GettingStarted = () => {
       const response = await axios.post('/user/verify-email-resend', emailData)
 
       if (response.status === 200) {
-        console.log('Email Sent')
+        closeModal()
+        setEmailSentVer(true)
       }
-      // 200 success show get started
 
       //
-    } catch (err) {
-      console.error(err)
-      if (err.response.status === 404) {
-        setTokenVerified('invalid')
-      } else if (err.response.status === 401) {
-        setTokenVerified('expired')
-      }
-      // 404 token invalid  token not valid
-      // 401 token expired  token not valid
-    }
+    } catch (err) {}
   }
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
-    console.log(urlParams)
+
     const value = urlParams.get('token')
     setUrlValue(value)
     const parts = value.split('_')
@@ -80,8 +81,6 @@ const GettingStarted = () => {
   }, [token])
 
   verifyApi()
-
-  console.log(tokenVerified)
 
   return (
     <>
@@ -110,8 +109,11 @@ const GettingStarted = () => {
                 <p className={styles.cardDesc}>
                   Access invoices from courses you have purchased.
                 </p>
-                <button className={`${styles.cardCta} ${styles.cardOneCta}`}>
-                  Create an account <FontAwesomeIcon icon={faRightLong} />
+                <button
+                  onClick={openLoginModal}
+                  className={`${styles.cardCta} ${styles.cardOneCta}`}
+                >
+                  Login to your account <FontAwesomeIcon icon={faRightLong} />
                 </button>
               </div>
               <div className={styles.cardRightCol}>
@@ -159,37 +161,82 @@ const GettingStarted = () => {
         </div>
       )}
 
-      {tokenVerified === 'invalid' && (
-        <h2
-          style={{
-            height: '90vh',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          Invalid Token
-        </h2>
-      )}
-
-      {tokenVerified === 'expired' && (
-        <h2
-          style={{
-            height: '90vh',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-            gap: '1rem',
-          }}
-        >
-          Token Expired
+      {tokenVerified === 'empty' && (
+        <>
+          <h2
+            style={{
+              height: '90vh',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              gap: '1rem',
+            }}
+          >
+            Token Expired
+          </h2>
           <button className='cta' onClick={() => resendEmail()}>
             Resend Verification Email
           </button>
-        </h2>
+        </>
+      )}
+
+      {tokenVerified === 'expired' && (
+        <>
+          <h2
+            style={{
+              height: '90vh',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              gap: '1rem',
+            }}
+          >
+            Token Expired
+          </h2>
+          <button className='cta' onClick={() => resendEmail()}>
+            Resend Verification Email
+          </button>
+        </>
+      )}
+
+      {tokenVerified === 'already-verified' && (
+        <>
+          <h2
+            style={{
+              height: '90vh',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              gap: '1rem',
+            }}
+          >
+            Already verified, please login to continue
+          </h2>
+        </>
+      )}
+
+      {tokenVerified === 'error' && (
+        <>
+          <h2
+            style={{
+              height: '90vh',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              gap: '1rem',
+            }}
+          >
+            Something went wrong
+          </h2>
+        </>
       )}
     </>
   )

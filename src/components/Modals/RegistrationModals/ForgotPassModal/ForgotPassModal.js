@@ -40,7 +40,9 @@ const ForgotPassModal = () => {
       }
       console.log(response)
     } catch (err) {
+      // error codes ?
       console.error(err)
+      closeModal()
       setEmailNotFound(true)
     }
   }

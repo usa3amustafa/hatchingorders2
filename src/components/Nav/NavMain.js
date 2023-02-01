@@ -17,6 +17,7 @@ import RegistrationModal from '../Modals/RegistrationModals/RegistrationModal'
 import SuccessModal from '../Modals/SuccessModal/SuccessModal'
 import ErrorModal from '../Modals/ErrorModal/ErrorModal'
 import Contactus from '../Contactus/Contactus'
+import LogoutModal from '../Modals/LogoutModal/Logout'
 
 const NavMain = () => {
   const {
@@ -36,7 +37,12 @@ const NavMain = () => {
     notfound,
     dataIncorrect,
     emailSent,
+    emailSentVer,
     emailNotFound,
+    openLogoutModal,
+    logoutModal,
+    loggedOut,
+    logoutPrb,
   } = useContext(AppContext)
 
   const cartTotalItems = cartProducts.reduce(
@@ -78,7 +84,15 @@ const NavMain = () => {
                     <p className={styles.cartCount}>{cartTotalItems}</p>
                   </li>
                   <li>
-                    <button onClick={() => openRegistrationModal()}>
+                    <button
+                      onClick={() => {
+                        localStorage.getItem('loggedIn') === 'true'
+                          ? openLogoutModal()
+                          : openRegistrationModal()
+
+                        console.log(typeof localStorage.getItem('loggedIn'))
+                      }}
+                    >
                       <img src={userIcon} alt='' loading='lazy' />
                     </button>
                   </li>
@@ -137,6 +151,27 @@ const NavMain = () => {
         <ErrorModal
           msg='Email not found'
           desc='No account found against the enetered email'
+        />
+      )}
+
+      {/* logout modal */}
+      {logoutModal && <LogoutModal />}
+      {loggedOut && (
+        <SuccessModal msg='Logged Out' desc='You have succesfully logged out' />
+      )}
+
+      {logoutPrb && (
+        <ErrorModal
+          msg='Something Went Wrong'
+          desc='unable to logout , please try again!'
+        />
+      )}
+
+      {/* getting started */}
+      {emailSentVer && (
+        <SuccessModal
+          msg='Verification Required'
+          desc='Please check your mail to verify your email'
         />
       )}
     </>

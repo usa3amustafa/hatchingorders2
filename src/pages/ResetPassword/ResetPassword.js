@@ -20,6 +20,8 @@ const ResetPassword = () => {
     setTokenNotAuthenticated,
     failedPassUpdate,
     setFailedPassUpdate,
+    tokenExpired,
+    setTokenExpired,
     closeModal,
   } = useContext(AppContext)
 
@@ -74,7 +76,8 @@ const ResetPassword = () => {
         console.log('token cannot be authenticated')
         setTokenNotAuthenticated(true)
       } else if (err.response.status === 402) {
-        console.log('token cannot be authenticated')
+        console.log('token expired')
+        setTokenExpired(true)
         // confirm this
       } else if (err.response.status === 403) {
         console.log('failed to update password')
@@ -180,6 +183,12 @@ const ResetPassword = () => {
         />
       )}
       {failedPassUpdate && (
+        <ErrorModal
+          msg='Failed password update'
+          desc='please try again later'
+        />
+      )}
+      {tokenExpired && (
         <ErrorModal
           msg='Failed password update'
           desc='please try again later'

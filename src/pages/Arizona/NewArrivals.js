@@ -9,25 +9,32 @@ const arizonaFaqItems = [
 
     title:
       'Are You a School Counselor in Arizona Looking to Renew Your License?',
-    desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
+    desc: `Hatching Results partners with California State University San Marcos (CSUSM) to offer courses for school counselors for continued education. These courses allow Arizona School Counselors to complete the 6 semester (credit) hour deficiency to renew their certificates in the three-year window who apply for certification under options B, C, and D.
+.`,
   },
   {
     id: 2,
 
     title: 'About Our Courses',
-    desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
+    desc: [
+      `Each course is self-paced.`,
+      `Each course takes approximately 15 hours to complete.`,
+    ],
   },
   {
     id: 3,
 
     title: 'Pricing/Discounts for Arizona Counselors',
-    desc: `American School Counselor Association. (2022). The ASCA national model: A framework for school counseling programs (4th ed.). Alexandria, VA. Author.`,
+    desc: `Need more than one course? Hatching Results offers discounts to Arizona counselors to meet ADE requirements.`,
+    pricingTable: true,
   },
   {
     id: 4,
 
     title: 'University Credits',
-    desc: `Challenge yourself to become an expert in creating comprehensive school counseling programs. Learn how to utilize data to design, implement and evaluate your school counseling program to ensure that all students are supported in the academic, social/emotional, college and career readiness domains.`,
+    desc: `If you are interested in obtaining university credit for a low additional fee, each course is worth 1 semester (credit) hour through California State University - San Marcos. Instructions and more information on how to obtain this credit can be found `,
+    link: `here`,
+    href: 'https://www.csusm.edu/el/courses/professionaldevelopment.html',
     note: `Note: You'll Earn a Certificate of Completion from Hatching Results`,
   },
 ]

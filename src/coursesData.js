@@ -60,6 +60,11 @@ export const coursesData = [
       `Explain the conceptual diagram for intentional guidance`,
       `Create the conceptual diagram for systems change`,
     ],
+    adeDeficiency: [
+      `Completion of course via the
+university credit option will satisfy one credit hour for Option B-2 and Option C-2 
+`,
+    ],
 
     faqItems: [
       {
@@ -149,6 +154,12 @@ with colleagues`,
 Activity`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+university credit option will satisfy one credit hour for Option B-2 andOption C-2
+`,
+    ],
+
     faqItems: [
       {
         id: 1,
@@ -219,6 +230,12 @@ Activity`,
       `Create a curriculum action plan for the school`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+university credit option will satisfy one credit hour for Option B-2 and Option C-2 
+`,
+    ],
+
     faqItems: [
       {
         id: 1,
@@ -287,18 +304,17 @@ Activity`,
       `Assist students in developing stronger self-efficacy towards their postsecondary goals.`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option B-2, Option C-2 and Option D-2`,
+    ],
+
     faqItems: [
       {
         id: 1,
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {
@@ -338,7 +354,7 @@ Activity`,
     knowledge: [
       `Explain the school counselor's and college advisor's role within Multi-Tiered (Multi-Domain) System of Supports`,
       `Understand the importance of implementing a
-Multi-Tiered, Multi-Domain System of Supports to develop middle school postsecondary readiness.`,
+      Multi-Tiered, Multi-Domain System of Supports to develop middle school postsecondary readiness.`,
       `Explain the role of data in the development of Multi-Tiered (Multi-Domain) System of Supports in Tiers 1, 2 & 3
 `,
       `Differentiate between achievement-related and achievement-data`,
@@ -349,16 +365,21 @@ Multi-Tiered, Multi-Domain System of Supports to develop middle school postsecon
 
     skills: [
       `Develop ideas and strategies to create programs and
-services for middle school students postsecondary readiness.`,
+      services for middle school students postsecondary readiness.`,
       `Distinguish Tier 1 activities that all students should
-receive to support
-postsecondary readiness`,
+      receive to support
+      postsecondary readiness`,
       `Distinguish which Tier 2 & 3
-activities students should receive to support their postsecondary readiness`,
+      activities students should receive to support their postsecondary readiness`,
       `Examine your school's current use of data and
-determine what additional data is needed to begin supporting your students' postsecondary readiness`,
+      determine what additional data is needed to begin supporting your students' postsecondary readiness`,
       `Create a Flashlight, 1-Pager, or Highlight Reel to showcase results of Tier 1 instruction`,
       `Create charts/graphs that highlight student success and outcomes`,
+    ],
+
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option B-2, Option C-2 and Option D-2`,
     ],
 
     faqItems: [
@@ -367,12 +388,6 @@ determine what additional data is needed to begin supporting your students' post
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {
@@ -397,7 +412,7 @@ determine what additional data is needed to begin supporting your students' post
     courseDesc: {
       desc: [
         `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
-readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+        readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
       ],
     },
 
@@ -413,15 +428,15 @@ readiness counseling to support the postsecondary development of middle school s
       `Evaluate current college and career program as it pertains to each component of college & career readiness`,
       `Develop ideas and strategies to implement a college and career culture at the middle school`,
       `Design programs and services to support
-academic success for all
-students`,
+      academic success for all
+      students`,
       `Examine the role of course
-sequencing to prepare middle school students for advanced course work`,
+      sequencing to prepare middle school students for advanced course work`,
       `Develop college & career exploration systems of
-support for middle school
-students`,
+      support for middle school
+      students`,
       `Develop a plan to provide
-financial aid information to students and their families`,
+      financial aid information to students and their families`,
     ],
 
     knowledge: [
@@ -432,18 +447,17 @@ financial aid information to students and their families`,
       `Distinguish between different types of financial aid`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option B-2, Option C-2 and Option D-2`,
+    ],
+
     faqItems: [
       {
         id: 1,
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {
@@ -498,6 +512,10 @@ financial aid information to students and their families`,
       `Create a menu of services`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option D-2`,
+    ],
     faqItems: [
       {
         id: 1,
@@ -505,12 +523,7 @@ financial aid information to students and their families`,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
       },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
-      },
+
       {
         id: 3,
         icon: faBookReader,
@@ -538,7 +551,7 @@ financial aid information to students and their families`,
     courseDesc: {
       desc: [
         `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
-readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+        readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
       ],
     },
 
@@ -554,15 +567,15 @@ readiness counseling to support the postsecondary development of middle school s
       `Evaluate current college and career program as it pertains to each component of college & career readiness`,
       `Develop ideas and strategies to implement a college and career culture at the middle school`,
       `Design programs and services to support
-academic success for all
-students`,
+      academic success for all
+      students`,
       `Examine the role of course
-sequencing to prepare middle school students for advanced course work`,
+      sequencing to prepare middle school students for advanced course work`,
       `Develop college & career exploration systems of
-support for middle school
-students`,
+      support for middle school
+      students`,
       `Develop a plan to provide
-financial aid information to students and their families`,
+      financial aid information to students and their families`,
     ],
 
     knowledge: [
@@ -573,18 +586,17 @@ financial aid information to students and their families`,
       `Distinguish between different types of financial aid`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option B-2 and Option C-2`,
+    ],
+
     faqItems: [
       {
         id: 1,
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {
@@ -608,7 +620,7 @@ financial aid information to students and their families`,
     courseDesc: {
       desc: [
         `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
-readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+        readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
       ],
     },
 
@@ -624,15 +636,15 @@ readiness counseling to support the postsecondary development of middle school s
       `Evaluate current college and career program as it pertains to each component of college & career readiness`,
       `Develop ideas and strategies to implement a college and career culture at the middle school`,
       `Design programs and services to support
-academic success for all
-students`,
+      academic success for all
+      students`,
       `Examine the role of course
-sequencing to prepare middle school students for advanced course work`,
+      sequencing to prepare middle school students for advanced course work`,
       `Develop college & career exploration systems of
-support for middle school
-students`,
+      support for middle school
+      students`,
       `Develop a plan to provide
-financial aid information to students and their families`,
+      financial aid information to students and their families`,
     ],
 
     knowledge: [
@@ -643,18 +655,17 @@ financial aid information to students and their families`,
       `Distinguish between different types of financial aid`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option D-2`,
+    ],
+
     faqItems: [
       {
         id: 1,
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {
@@ -678,7 +689,7 @@ financial aid information to students and their families`,
     courseDesc: {
       desc: [
         `This is the third course in a three part series, helping schools define college and career readiness for middle school students. School counselors and college access partners go in depth through the eight components of college and career
-readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
+        readiness counseling to support the postsecondary development of middle school students. In this course, participants will not only learn about essential elements and tools available for college and career readiness, but how to incorporate them within the Mutli-Tiered Mutli-Domain System of Supports (MTMDSS). In addition, school counselors and college access partners will be provided multiple resources, examples, and opportunities to develop a comprehensive college and career readiness program for their students and families.`,
       ],
     },
 
@@ -694,15 +705,15 @@ readiness counseling to support the postsecondary development of middle school s
       `Evaluate current college and career program as it pertains to each component of college & career readiness`,
       `Develop ideas and strategies to implement a college and career culture at the middle school`,
       `Design programs and services to support
-academic success for all
-students`,
+      academic success for all
+      students`,
       `Examine the role of course
-sequencing to prepare middle school students for advanced course work`,
+      sequencing to prepare middle school students for advanced course work`,
       `Develop college & career exploration systems of
-support for middle school
-students`,
+      support for middle school
+      students`,
       `Develop a plan to provide
-financial aid information to students and their families`,
+      financial aid information to students and their families`,
     ],
 
     knowledge: [
@@ -713,18 +724,16 @@ financial aid information to students and their families`,
       `Distinguish between different types of financial aid`,
     ],
 
+    adeDeficiency: [
+      `Completion of course via the
+      university credit option will satisfy one credit hour for Option B-2, Option C-2 and Option D-2`,
+    ],
     faqItems: [
       {
         id: 1,
         icon: faLaptop,
         title: 'Instructor Methods and Course Design',
         desc: `This course is designed to be self-paced to accommodate hectic schedules. Course goals will be met using a combination of readings from the included e-textbook, videos, activities, and other supplemental readings. Learnings from each lesson can be immediately implemented in the school building.`,
-      },
-      {
-        id: 2,
-        icon: faBook,
-        title: 'Best-Selling ebook Included',
-        desc: `Hatch, T. & Hartline, J. (2021). The use of data in school counseling: Hatching results (and so much more) for students, programs, and the profession. Thousand Oaks, CA: Corwin.`,
       },
 
       {

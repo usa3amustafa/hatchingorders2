@@ -4,9 +4,7 @@ const Testimonials = () => {
   return (
     <section className='testimonial-bg'>
       <div className='container testimonial'>
-        <h2 className='testimonial-title'>
-          Trusted by Districts <br />& Counselors
-        </h2>
+        <h2 className='testimonial-title'>Trusted by School Counselors</h2>
 
         <div className='testimonial-text'>
           <img

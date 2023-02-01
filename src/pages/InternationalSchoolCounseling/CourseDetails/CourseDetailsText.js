@@ -91,7 +91,7 @@ const CourseDetailsText = ({ currCourse }) => {
         </div>
       </div>
       {/* sec controls component */}
-      <div className='courseDetailsSecControls'>
+      {/* <div className='courseDetailsSecControls'>
         <a href='#' className='cta-sec'>
           <FontAwesomeIcon icon={faHeart} />
           add to wishlist
@@ -101,7 +101,7 @@ const CourseDetailsText = ({ currCourse }) => {
           <FontAwesomeIcon icon={faShare} />
           share
         </a>
-      </div>
+      </div> */}
       {/* faq */}
       <Faq faqItems={currCourse.faqItems} />
     </div>
